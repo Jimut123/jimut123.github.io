@@ -1,0 +1,2099 @@
+<!doctype html>
+
+<!-- DNS Preconnect for faster external resource loading -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdnjs.cloudflare.com">
+<link rel="preconnect" href="https://mdbootstrap.com">
+
+<link href="https://fonts.googleapis.com/css?family=Cardo&display=swap" rel="stylesheet"> 
+
+<!--
+<link rel="stylesheet" href="/css/compiled-4.8.0.min.css"></link>
+-->
+
+<link rel="shortcut icon" type="image/x-icon" href="../img/thumbnail.jpg">
+
+
+<!-- Bootstrap core CSS -->
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Material Design Bootstrap -->
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.0/css/mdb.min.css" rel="stylesheet">
+
+
+
+<!-- jQuery must be loaded before Bootstrap JavaScript -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+<!-- Bootstrap core JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+<!-- Lazy loading of Gallery and stuffs!-->
+
+<script src="../js/jimjs.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<link rel = "stylesheet" type = "text/css" href = "../css/jimstyle.css" />
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Jimut Bahan Pal" />
+    <meta name="description" content="Personal website of Jimut Bahan Pal - Researcher, Developer, and Machine Learning enthusiast. Explore projects, publications, blogs, and more.">
+    <meta name="keywords" content="Jimut Bahan Pal, machine learning, deep learning, computer vision, IIT Bombay, research, projects, publications">
+    <meta name="google-site-verification" content="2SC5t4-rLXOS1eAW-l2YL_qFLuIJW2vSRZNduyOGKN0" />
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://jimut123.github.io/projects.html">
+    
+    <!-- Open Graph Meta Tags for Social Sharing -->
+    <meta property="og:title" content="Projects Page">
+    <meta property="og:description" content="Personal website of Jimut Bahan Pal - Researcher, Developer, and Machine Learning enthusiast. Explore projects, publications, blogs, and more.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://jimut123.github.io/projects.html">
+    <meta property="og:image" content="https://jimut123.github.io/img/jimut.jpeg">
+    <meta property="og:site_name" content="Jimut Bahan Pal - Personal Website">
+    <meta property="og:locale" content="en_IN">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Projects Page">
+    <meta name="twitter:description" content="Personal website of Jimut Bahan Pal - Researcher, Developer, and Machine Learning enthusiast. Explore projects, publications, blogs, and more.">
+    <meta name="twitter:image" content="https://jimut123.github.io/img/jimut.jpeg">
+    <meta name="twitter:creator" content="@jimut_pal">
+    
+    <!-- Additional SEO Meta Tags -->
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow, max-image-preview:large">
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-140291358-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-140291358-1');
+    </script>
+
+    
+    <title> Projects Page </title>
+  </head>
+
+  <body onload = "myFunction()">
+    <div id="loading"> </div>
+    
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        /* --- 1. THEME VARIABLES --- */
+        :root {
+            --site-bg: #ffffff;
+            --site-text: #333333;
+            
+            /* Light Mode Navbar */
+            --nav-glass-bg: rgba(255, 255, 255, 0.85);
+            --nav-border: rgba(0, 0, 0, 0.05);
+            --nav-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+            --nav-text: #444444;
+            --nav-accent: #18a236;
+            --nav-hover-bg: rgba(24, 162, 54, 0.08);
+            
+            /* ICON STYLE: Gray by default */
+            --icon-filter: grayscale(100%) opacity(0.7); 
+            --icon-filter-hover: grayscale(0%) opacity(1);
+        }
+
+        [data-theme="dark"] {
+            --site-bg: #121212;
+            --site-text: #f0f0f0;
+            
+            /* Dark Mode Navbar */
+            --nav-glass-bg: rgba(18, 18, 18, 0.85);
+            --nav-border: rgba(255, 255, 255, 0.1);
+            --nav-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+            --nav-text: #e0e0e0;
+            --nav-accent: #4ade80;
+            --nav-hover-bg: rgba(74, 222, 128, 0.15);
+            
+            /* ICON STYLE DARK MODE: Invert colors so black icons become white/gray */
+            --icon-filter: grayscale(100%) invert(1) opacity(0.8);
+            --icon-filter-hover: grayscale(0%) invert(1) opacity(1); 
+        }
+
+        body {
+            background-color: var(--site-bg);
+            color: var(--site-text);
+            transition: background-color 0.3s ease, color 0.3s ease;
+            margin: 0;
+        }
+
+        /* --- 2. NAVBAR STYLING --- */
+        .glass-navbar {
+            background: var(--nav-glass-bg) !important;
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--nav-border);
+            box-shadow: var(--nav-shadow);
+            padding: 0.8rem 1rem !important;
+            transition: all 0.3s ease;
+            position: sticky;
+            top: 0;
+            z-index: 1030;
+        }
+
+        .glass-navbar .nav-link {
+            font-family: 'Poppins', sans-serif;
+            color: var(--nav-text) !important;
+            font-weight: 500;
+            font-size: 0.9rem;
+            padding: 8px 16px !important;
+            border-radius: 8px;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* ICON STYLING */
+        .glass-navbar .nav-link img {
+            transition: transform 0.2s ease, filter 0.3s ease;
+            filter: var(--icon-filter);
+        }
+
+        /* HOVER EFFECTS */
+        .glass-navbar .nav-link:hover {
+            background-color: var(--nav-hover-bg) !important;
+            color: var(--nav-accent) !important;
+        }
+        
+        .glass-navbar .nav-link:hover img {
+            transform: scale(1.2) rotate(-5deg);
+            filter: var(--icon-filter-hover);
+        }
+
+        /* Active State */
+        .glass-navbar .nav-item.active .nav-link {
+            color: var(--nav-accent) !important;
+            font-weight: 600;
+        }
+        
+        .glass-navbar .nav-item.active .nav-link img {
+            filter: var(--icon-filter-hover);
+        }
+
+        /* Underline Animation */
+        .glass-navbar .nav-item { position: relative; }
+        .glass-navbar .nav-item::after {
+            content: '';
+            position: absolute;
+            bottom: 2px;
+            left: 50%;
+            width: 0%;
+            height: 3px;
+            background: var(--nav-accent);
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+            border-radius: 2px;
+        }
+        .glass-navbar .nav-item.active::after { width: 70%; }
+
+        /* --- 3. THEME BUTTON --- */
+        #theme-toggle {
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            font-size: 1.6rem;
+            padding: 5px;
+            line-height: 1;
+            color: var(--nav-text);
+            transition: transform 0.3s;
+        }
+        #theme-toggle:hover { transform: rotate(45deg) scale(1.1); }
+        #theme-toggle:focus { outline: none; }
+
+        /* --- 4. CUSTOM HAMBURGER BUTTON (RENAMED CLASSES) --- */
+        .custom-menu-btn {
+            border: none;
+            background: transparent;
+            cursor: pointer;
+            padding: 10px;
+            width: 45px;
+            height: 45px;
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+            position: relative;
+            z-index: 1031;
+        }
+        
+        /* Show hamburger only on mobile */
+        @media (max-width: 991px) {
+            .custom-menu-btn {
+                display: flex;
+            }
+        }
+        
+        .custom-menu-btn:focus {
+            outline: none;
+            box-shadow: none;
+        }
+        
+        .menu-line {
+            display: block;
+            width: 26px;
+            height: 3px;
+            background-color: var(--nav-text);
+            transition: all 0.3s ease-in-out;
+            border-radius: 2px;
+        }
+
+        /* X transformation when open */
+        .custom-menu-btn.menu-open .menu-line:nth-child(1) {
+            transform: translateY(8px) rotate(45deg);
+            background-color: var(--nav-accent);
+        }
+
+        .custom-menu-btn.menu-open .menu-line:nth-child(2) { 
+            opacity: 0; 
+            transform: translateX(20px);
+        }
+
+        .custom-menu-btn.menu-open .menu-line:nth-child(3) {
+            transform: translateY(-8px) rotate(-45deg);
+            background-color: var(--nav-accent);
+        }
+
+        @media (max-width: 991px) {
+            .glass-navbar .navbar-collapse {
+                background: var(--site-bg);
+                padding: 15px;
+                border-radius: 12px;
+                margin-top: 15px;
+                border: 1px solid var(--nav-border);
+                box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            }
+            .glass-navbar .nav-item::after { display: none; }
+            .glass-navbar .nav-item.active .nav-link {
+                border-left: 4px solid var(--nav-accent);
+                background-color: var(--nav-hover-bg) !important;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg glass-navbar">
+    <div class="container-fluid">
+        
+        <div class="navbar-brand">
+            <button id="theme-toggle" aria-label="Switch Theme">
+                <span id="theme-icon">🌞</span>
+            </button>
+        </div>
+
+        <button class="custom-menu-btn" type="button" id="menuToggle" aria-label="Toggle navigation" aria-controls="mainNav" aria-expanded="false">
+            <span class="menu-line"></span>
+            <span class="menu-line"></span>
+            <span class="menu-line"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-end" id="mainNav">
+            <ul class="navbar-nav">
+                
+                    <li class="nav-item">
+                        <a href="/" class="nav-link">
+                            
+                            
+                                <img src="/img/icons/home.svg" alt="icon" height="20px" width="20px">
+                            
+                            
+                            <span>Home</span>
+                        </a>
+                    </li>
+                
+                    <li class="nav-item">
+                        <a href="/publications.html" class="nav-link">
+                            
+                            
+                                <img src="/img/icons/publications.png" alt="icon" height="20px" width="20px">
+                            
+                            
+                            <span>Publications</span>
+                        </a>
+                    </li>
+                
+                    <li class="nav-item">
+                        <a href="/blog.html" class="nav-link">
+                            
+                            
+                                <img src="/img/icons/blog.svg" alt="icon" height="20px" width="20px">
+                            
+                            
+                            <span>Blog</span>
+                        </a>
+                    </li>
+                
+                    <li class="nav-item">
+                        <a href="/projects.html" class="nav-link">
+                            
+                            
+                                <img src="/img/icons/projects.jpg" alt="icon" height="20px" width="20px">
+                            
+                            
+                            <span>Projects</span>
+                        </a>
+                    </li>
+                
+                    <li class="nav-item">
+                        <a href="/random.html" class="nav-link">
+                            
+                            
+                                <img src="/img/icons/certificates.png" alt="icon" height="20px" width="20px">
+                            
+                            
+                            <span>Random</span>
+                        </a>
+                    </li>
+                
+                    <li class="nav-item">
+                        <a href="/search/" class="nav-link">
+                            
+                            
+                                <img src="/img/icons/search.png" alt="icon" height="20px" width="20px">
+                            
+                            
+                            <span>Search</span>
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+    const toggleButton = document.getElementById('theme-toggle');
+    const themeIcon = document.getElementById('theme-icon');
+    const body = document.body;
+
+    // Theme Logic
+    const currentTheme = localStorage.getItem('theme');
+    if (currentTheme) {
+        body.setAttribute('data-theme', currentTheme);
+        themeIcon.textContent = currentTheme === 'dark' ? '🌜' : '🌞';
+    } else {
+        body.setAttribute('data-theme', 'light');
+    }
+
+    toggleButton.addEventListener('click', () => {
+        const currentTheme = body.getAttribute('data-theme');
+        const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+        body.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
+        themeIcon.textContent = newTheme === 'dark' ? '🌜' : '🌞';
+    });
+
+    // Mobile menu toggle (works without Bootstrap collapse plugin)
+    const menuBtn = document.getElementById('menuToggle');
+    const navCollapse = document.getElementById('mainNav');
+
+    function setMenuState(isOpen) {
+        menuBtn.classList.toggle('menu-open', isOpen);
+        navCollapse.classList.toggle('show', isOpen);
+        menuBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    }
+
+    menuBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        setMenuState(!navCollapse.classList.contains('show'));
+    });
+
+    document.addEventListener('click', function(e) {
+        if (window.innerWidth <= 991 && !menuBtn.contains(e.target) && !navCollapse.contains(e.target)) {
+            setMenuState(false);
+        }
+    });
+
+    window.addEventListener('resize', function() {
+        if (window.innerWidth > 991) {
+            setMenuState(false);
+        }
+    });
+
+    // Active Link Logic
+    $(function() {
+        var url = window.location.href;
+        $(".glass-navbar a.nav-link").each(function() {
+            if (url == (this.href)) {
+                $(this).closest(".nav-item").addClass("active");
+            }
+        });
+    });
+</script>
+
+</body>
+</html>
+
+    <div align="center">  
+      <br><br>
+      
+      <link href="https://fonts.googleapis.com/css?family=Playfair+Display&amp;display=swap" rel="stylesheet" />
+
+<h1>
+    <b id="heading-font"> PROJECTS </b>
+</h1>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&amp;family=Cardo:ital,wght@0,400;1,400&amp;display=swap" rel="stylesheet" />
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+<link rel="stylesheet" type="text/css" href="../css/jimstyle.css" />
+
+<style>
+    /* Variables */
+    :root {
+        --proj-accent: #2b6cb0;
+        --proj-bg: rgba(255, 255, 255, 0.75);
+        --proj-border: rgba(255, 255, 255, 0.6);
+        --proj-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
+        --proj-radius: 12px;
+    }
+
+    /* Header Text (Kept Centered for balance, change to left if preferred) */
+    .intro-text {
+        /* font-family: 'Cardo', serif; */
+        font-size: 1.1rem;
+        color: #555;
+        text-align: center; 
+        margin-top: 30px;
+        margin-bottom: 50px;
+        /* font-style: italic; */
+    }
+
+    /* THE PROJECT CARD (Glassmorphism) */
+    .project-card {
+        background: var(--proj-bg);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid var(--proj-border);
+        box-shadow: var(--proj-shadow);
+        border-radius: var(--proj-radius);
+        padding: 25px;
+        margin-bottom: 30px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+        
+        /* STRICT LEFT ALIGNMENT */
+        text-align: left !important;
+    }
+
+    .project-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 15px 40px 0 rgba(31, 38, 135, 0.12);
+        border-color: #fff;
+    }
+
+    /* --- IMAGE SECTION --- */
+    .proj-img-wrapper {
+        flex: 0 0 260px; /* Fixed width */
+        position: relative;
+        border-radius: 8px;
+        overflow: hidden;
+        height: 190px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        background: #fff;
+    }
+
+    .proj-img-wrapper img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: opacity 0.4s ease-in-out;
+    }
+
+    /* Hover Swap Logic */
+    .img-after { opacity: 0; z-index: 2; }
+    .img-before { z-index: 1; }
+
+    .project-card:hover .img-after { opacity: 1; }
+
+    /* --- CONTENT SECTION --- */
+    .proj-content {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        
+        /* FORCE FLEX ITEMS LEFT */
+        align-items: flex-start !important; 
+        justify-content: flex-start !important;
+        text-align: left !important;
+    }
+
+    .proj-title {
+        /* font-family: 'Poppins', sans-serif; */
+        font-size: 1.35rem;
+        font-weight: 700;
+        color: #2c3e50;
+        margin-bottom: 4px;
+        text-decoration: none;
+        transition: color 0.2s;
+        text-align: left;
+        line-height: 1.3;
+    }
+
+    .proj-title:hover {
+        color: var(--proj-accent);
+    }
+
+    .proj-authors {
+        /* font-family: 'Poppins', sans-serif; */
+        font-size: 0.9rem;
+        color: #666;
+        margin-bottom: 12px;
+        text-align: left;
+    }
+
+    .proj-desc {
+        /* font-family: 'Cardo', serif; */
+        font-size: 1.05rem;
+        color: #444;
+        line-height: 1.6;
+        margin-bottom: 18px;
+        text-align: left !important; /* Override 'justify' if set globally */
+    }
+
+    /* --- BADGES --- */
+    .badge-container {
+        margin-top: auto;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        
+        /* Ensure badges align left */
+        justify-content: flex-start; 
+    }
+
+    .proj-badge {
+        /* font-family: 'Poppins', sans-serif; */
+        font-size: 0.75rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        padding: 5px 12px;
+        border-radius: 6px; /* Slightly squarer than pill for tech look */
+        border: 1px solid #e0e0e0;
+        background: #fff;
+        color: #555;
+        text-decoration: none;
+        transition: all 0.2s;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+    }
+
+    .proj-badge:hover {
+        background: var(--proj-accent);
+        color: #fff;
+        border-color: var(--proj-accent);
+        transform: translateY(-1px);
+        text-decoration: none;
+    }
+
+    /* Specific Badge Colors */
+    .badge-arxiv:hover { background: #b31b1b; border-color: #b31b1b; }
+    .badge-code:hover { background: #24292e; border-color: #24292e; }
+    .badge-video:hover { background: #ff0000; border-color: #ff0000; }
+    .badge-game:hover { background: #e91e63; border-color: #e91e63; }
+
+    /* --- RESPONSIVE --- */
+    @media (max-width: 768px) {
+        .project-card {
+            flex-direction: column;
+            gap: 20px;
+        }
+        .proj-img-wrapper {
+            width: 100%;
+            height: 200px;
+            flex: none;
+        }
+        .intro-text {
+            padding: 0 15px;
+        }
+    }
+    /* --- IMAGE SECTION --- */
+.proj-img-wrapper {
+    flex: 0 0 260px; /* Fixed width */
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    height: 190px; /* Fixed height */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    background: #fff; /* Ensure background is white for images that don't fill */
+}
+
+.proj-img-wrapper img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* CHANGE THIS LINE: from 'cover' to 'contain' */
+    object-fit: contain; 
+    /* Optional: centers the image within the box */
+    object-position: center;
+    transition: opacity 0.4s ease-in-out;
+}
+</style>
+
+<div id="pad-container">
+    <div class="container" id="proj-page">
+        
+        <h6 class="intro-text" id="front-page-font"> 
+            A compilation of experimental out-of-focus creations crafted mostly during my undergraduate free time.
+        </h6>
+
+        
+
+            
+                
+                <article class="project-card">
+                    
+                    <div class="proj-img-wrapper">
+                        <img src="../img/project_img/jimut_mosaic_2.jpeg" class="img-after" alt="Image Mosaic demo" />
+                        <img src="../img/project_img/jimut_mosaic_1.jpg" class="img-before" alt="Image Mosaic static" />
+                    </div>
+
+                    <div class="proj-content">
+                        
+                        
+                            <a href="https://huggingface.co/spaces/jisnoo/collage_image" class="proj-title">Image Mosaic</a>
+                        
+
+                        <div class="proj-authors">Mentored project, created by <a href="https://jisnoo123.github.io/" target="_blank"> Jisnoo Dev Pal </a></div>
+
+                        <div class="proj-desc">Please access the demo here <a href="https://huggingface.co/spaces/jisnoo/collage_image" target="_blank">Image Mosaic Demo</a>. This project creates a mosaic of images from a dataset to recreate a target image. The images are chosen based on color similarity to the corresponding section of the target image. Check the github repo for generating video mosaics too!</div>
+
+                        <div class="badge-container">
+                            
+                            
+
+                            
+                                <a href="https://github.com/jisnoo123/collage" target="_blank" class="proj-badge badge-code">
+                                    <i class="fab fa-github"></i> Code
+                                </a>
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                        </div> </div> </article>
+
+            
+
+        
+
+            
+                
+                <article class="project-card">
+                    
+                    <div class="proj-img-wrapper">
+                        <img src="../img/project_img/j_system_2.png" class="img-after" alt="J-System demo" />
+                        <img src="../img/project_img/j_system_1.png" class="img-before" alt="J-System static" />
+                    </div>
+
+                    <div class="proj-content">
+                        
+                        
+                            <a href="demos/hunter.html" class="proj-title">J-System</a>
+                        
+
+                        <div class="proj-authors">Jimut Bahan Pal</div>
+
+                        <div class="proj-desc">One evening, inspired by the protagonist of Solo Leveling, I decided to create my own version of “the system” — a vibe-coded, glorified TODO application called J-SYSTEM, styled after the Manhwa and Anime. It was built in just two hours, purely for fun. The app simulates a leveling system, but with a twist- you create your own tasks, complete them, and level up; no punishments, no tangible rewards. While this might not be compelling for me without real-world stakes or a mysterious higher being assigning quests, those who enjoy virtual rewards (like in games) might find it addictive. Integrating it with VR could make it even more engaging. For now, it's a quirky little side project born from a late-night creative spark.</div>
+
+                        <div class="badge-container">
+                            
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                        </div> </div> </article>
+
+            
+
+        
+
+            
+                
+                <article class="project-card">
+                    
+                    <div class="proj-img-wrapper">
+                        <img src="../img/project_img/symmetric.gif" class="img-after" alt="Symmetric demo" />
+                        <img src="../img/project_img/symmetric_after.png" class="img-before" alt="Symmetric static" />
+                    </div>
+
+                    <div class="proj-content">
+                        
+                        
+                            <a href="demos/symmetric.html" class="proj-title">Symmetric</a>
+                        
+
+                        <div class="proj-authors">Jimut Bahan Pal</div>
+
+                        <div class="proj-desc">This was an evening project. A Symmetric Gibberish Artwork Creator to show that even Gibberish things when symmetric can look beautiful!</div>
+
+                        <div class="badge-container">
+                            
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                        </div> </div> </article>
+
+            
+
+        
+
+            
+                
+                <article class="project-card">
+                    
+                    <div class="proj-img-wrapper">
+                        <img src="../img/project_img/15_scrn_thumb.jpg" class="img-after" alt="jimutmap demo" />
+                        <img src="../img/project_img/jimut_map_logo.png" class="img-before" alt="jimutmap static" />
+                    </div>
+
+                    <div class="proj-content">
+                        
+                        
+                            <a href="projects/jimutmap.html" class="proj-title">jimutmap</a>
+                        
+
+                        <div class="proj-authors"><a href="https://github.com/Jimut123/jimutmap/blob/master/CONTRIBUTORS.md">The Jimutmap Contributors </a></div>
+
+                        <div class="proj-desc">API to get enormous amount of high resolution satellite images from apple maps quickly through multi-threading!</div>
+
+                        <div class="badge-container">
+                            
+                            
+
+                            
+                                <a href="https://github.com/Jimut123/jimutmap" target="_blank" class="proj-badge badge-code">
+                                    <i class="fab fa-github"></i> Code
+                                </a>
+                            
+
+                            
+
+                            
+
+                            
+                                <a href="../softwares/jimutmap-1.3.6.tar.gz" target="_blank" class="proj-badge">
+                                    <i class="fas fa-download"></i> Download
+                                </a>
+                            
+
+                            
+                                <a href="https://pypi.org/project/jimutmap/" target="_blank" class="proj-badge">
+                                    <i class="fas fa-box"></i> PyPI
+                                </a>
+                            
+
+                            
+                                <a href="https://www.youtube.com/watch?v=voH0qhGXfsU" target="_blank" class="proj-badge badge-video">
+                                    <i class="fab fa-youtube"></i> Video
+                                </a>
+                            
+
+                            
+
+                            
+                                <a href="../projects/jimutmap_1.html" target="_blank" class="proj-badge">
+                                    <i class="fas fa-eye"></i> Show
+                                </a>
+                            
+
+                            
+
+                            
+
+                        </div> </div> </article>
+
+            
+
+        
+
+            
+                
+                <article class="project-card">
+                    
+                    <div class="proj-img-wrapper">
+                        <img src="../img/gifs/captcha.gif" class="img-after" alt="Deceiving computers in Reverse Turing Test through Deep Learning demo" />
+                        <img src="../img/project_img/captcha_thumb.jpg" class="img-before" alt="Deceiving computers in Reverse Turing Test through Deep Learning static" />
+                    </div>
+
+                    <div class="proj-content">
+                        
+                        
+                            <a href="https://capptcha.github.io/" class="proj-title">Deceiving computers in Reverse Turing Test through Deep Learning</a>
+                        
+
+                        <div class="proj-authors">Jimut Bahan Pal</div>
+
+                        <div class="proj-desc">Project about breaking CAPTCHAs with Deep Learning</div>
+
+                        <div class="badge-container">
+                            
+                            
+                                <a href="https://arxiv.org/abs/2006.11373" target="_blank" class="proj-badge badge-arxiv">
+                                    <i class="fas fa-file-pdf"></i> arXiv
+                                </a>
+                            
+
+                            
+                                <a href="https://github.com/Jimut123/CAPTCHA" target="_blank" class="proj-badge badge-code">
+                                    <i class="fab fa-github"></i> Code
+                                </a>
+                            
+
+                            
+
+                            
+                                <a href="../files/JBP_SCRIPTS/JBP_021.pdf" target="_blank" class="proj-badge">
+                                    <i class="fas fa-chalkboard-teacher"></i> Slide
+                                </a>
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                        </div> </div> </article>
+
+            
+
+        
+
+            
+                
+                <article class="project-card">
+                    
+                    <div class="proj-img-wrapper">
+                        <img src="../img/gifs/wisp.gif" class="img-after" alt="Wisp - A preference based location finder application demo" />
+                        <img src="../img/project_img/1_wisp_themes_thumb.jpg" class="img-before" alt="Wisp - A preference based location finder application static" />
+                    </div>
+
+                    <div class="proj-content">
+                        
+                        
+                            <a href="projects/wisp.html" class="proj-title">Wisp - A preference based location finder application</a>
+                        
+
+                        <div class="proj-authors">Jimut Bahan Pal</div>
+
+                        <div class="proj-desc">A preference based location finder app for final year project! Want to find almost any place according to your preference ? in real time? then this app is for you. It uses Python3, tkinter for GUI and Folium Maps for visualisation!</div>
+
+                        <div class="badge-container">
+                            
+                            
+                                <a href="https://arxiv.org/abs/2002.05886" target="_blank" class="proj-badge badge-arxiv">
+                                    <i class="fas fa-file-pdf"></i> arXiv
+                                </a>
+                            
+
+                            
+                                <a href="https://github.com/Jimut123/wisp" target="_blank" class="proj-badge badge-code">
+                                    <i class="fab fa-github"></i> Code
+                                </a>
+                            
+
+                            
+                                <a href="../blogs/jjc_wisp.html" target="_blank" class="proj-badge">
+                                    <i class="fas fa-blog"></i> Blog
+                                </a>
+                            
+
+                            
+                                <a href="../blogs/JJC_WISP/wisp_ppt.pdf" target="_blank" class="proj-badge">
+                                    <i class="fas fa-chalkboard-teacher"></i> Slide
+                                </a>
+                            
+
+                            
+                                <a href="../softwares/wisp-0.0.8b0.tar.gz" target="_blank" class="proj-badge">
+                                    <i class="fas fa-download"></i> Download
+                                </a>
+                            
+
+                            
+                                <a href="https://pypi.org/project/wisp/" target="_blank" class="proj-badge">
+                                    <i class="fas fa-box"></i> PyPI
+                                </a>
+                            
+
+                            
+                                <a href="https://www.youtube.com/watch?v=__q1H-RrCu8&amp;t=0s" target="_blank" class="proj-badge badge-video">
+                                    <i class="fab fa-youtube"></i> Video
+                                </a>
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                        </div> </div> </article>
+
+            
+
+        
+
+            
+                
+                <article class="project-card">
+                    
+                    <div class="proj-img-wrapper">
+                        <img src="../img/project_img/14_xavo_thumb.jpg" class="img-after" alt="Xavotsav site 2018 demo" />
+                        <img src="../img/project_img/xavo1_thumb.jpg" class="img-before" alt="Xavotsav site 2018 static" />
+                    </div>
+
+                    <div class="proj-content">
+                        
+                        
+                            <a href="projects/xavo.html" class="proj-title">Xavotsav site 2018</a>
+                        
+
+                        <div class="proj-authors">Jimut Bahan Pal, Bikash Pandey, Souptik Mazumder, Kalyan Mazumder, Arion Mitra and Akash Manna</div>
+
+                        <div class="proj-desc">College's fest website!</div>
+
+                        <div class="badge-container">
+                            
+                            
+
+                            
+                                <a href="https://github.com/Jimut123/Xavo/tree/master/ver%204.2" target="_blank" class="proj-badge badge-code">
+                                    <i class="fab fa-github"></i> Code
+                                </a>
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                                <a href="../xavo2018/" target="_blank" class="proj-badge">
+                                    <i class="fas fa-eye"></i> Show
+                                </a>
+                            
+
+                            
+                                <a href="../xavo2018" target="_blank" class="proj-badge badge-game">
+                                    <i class="fas fa-gamepad"></i> Play Online
+                                </a>
+                            
+
+                            
+
+                        </div> </div> </article>
+
+            
+
+        
+
+            
+                
+                <article class="project-card">
+                    
+                    <div class="proj-img-wrapper">
+                        <img src="../img/project_img/analytica_thmub2.jpg" class="img-after" alt="Graphics Design - Analytica demo" />
+                        <img src="../img/project_img/analytica_thmub1.jpg" class="img-before" alt="Graphics Design - Analytica static" />
+                    </div>
+
+                    <div class="proj-content">
+                        
+                        
+                            <a href="../projects/analytica_design.html" class="proj-title">Graphics Design - Analytica</a>
+                        
+
+                        <div class="proj-authors">Jimut Bahan Pal, Subhajit Karmakar, Saikat Ganguly, Lagnajit Pradhan, Ayon Tarafdar and Bodhiswatta Saha</div>
+
+                        <div class="proj-desc">Graphics work done in Math Dept. Fest - Analytica (St. Xavier's College, Kolkata)</div>
+
+                        <div class="badge-container">
+                            
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                                <a href="https://drive.google.com/drive/folders/1nP7zkG3q32RiXziZas0absN97lfIBys4?usp=sharing" target="_blank" class="proj-badge">
+                                    <i class="fab fa-google-drive"></i> Drive
+                                </a>
+                            
+
+                            
+
+                            
+
+                            
+
+                        </div> </div> </article>
+
+            
+
+        
+
+            
+                
+                <article class="project-card">
+                    
+                    <div class="proj-img-wrapper">
+                        <img src="../img/gifs/basic_excel_app.gif" class="img-after" alt="MIS Application using tkinter demo" />
+                        <img src="../img/project_img/4_show_db_thumb.jpg" class="img-before" alt="MIS Application using tkinter static" />
+                    </div>
+
+                    <div class="proj-content">
+                        
+                        
+                            <a href="projects/mis.html" class="proj-title">MIS Application using tkinter</a>
+                        
+
+                        <div class="proj-authors">Jimut Bahan Pal</div>
+
+                        <div class="proj-desc">Tkinter application.</div>
+
+                        <div class="badge-container">
+                            
+                            
+
+                            
+                                <a href="https://github.com/Jimut123/basic_excel_app" target="_blank" class="proj-badge badge-code">
+                                    <i class="fab fa-github"></i> Code
+                                </a>
+                            
+
+                            
+
+                            
+
+                            
+                                <a href="../softwares/basic_MIS.tar.gz" target="_blank" class="proj-badge">
+                                    <i class="fas fa-download"></i> Download
+                                </a>
+                            
+
+                            
+
+                            
+                                <a href="https://www.youtube.com/watch?v=VS2RcP_36LQ&amp;index=5&amp;list=PLOmLd6CrOu1MmvIXz3OkoWOyEjsKaPrff" target="_blank" class="proj-badge badge-video">
+                                    <i class="fab fa-youtube"></i> Video
+                                </a>
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                        </div> </div> </article>
+
+            
+
+        
+
+            
+                
+                <article class="project-card">
+                    
+                    <div class="proj-img-wrapper">
+                        <img src="../img/project_img/jgd_1_thumb.jpg" class="img-after" alt="JGD- Jimut's Git Downloader demo" />
+                        <img src="../img/project_img/16_jgd_thumb.jpg" class="img-before" alt="JGD- Jimut's Git Downloader static" />
+                    </div>
+
+                    <div class="proj-content">
+                        
+                        
+                            <a href="projects/jgd.html" class="proj-title">JGD- Jimut's Git Downloader</a>
+                        
+
+                        <div class="proj-authors">Jimut Bahan Pal</div>
+
+                        <div class="proj-desc">CLI tool to download folders/ repo with ease, without any token!</div>
+
+                        <div class="badge-container">
+                            
+                            
+
+                            
+                                <a href="https://github.com/Jimut123/jgd" target="_blank" class="proj-badge badge-code">
+                                    <i class="fab fa-github"></i> Code
+                                </a>
+                            
+
+                            
+
+                            
+
+                            
+                                <a href="../softwares/jgd-1.0.0-py3.7.egg" target="_blank" class="proj-badge">
+                                    <i class="fas fa-download"></i> Download
+                                </a>
+                            
+
+                            
+
+                            
+                                <a href="https://www.youtube.com/watch?v=jq9o54D2ySo" target="_blank" class="proj-badge badge-video">
+                                    <i class="fab fa-youtube"></i> Video
+                                </a>
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                        </div> </div> </article>
+
+            
+
+        
+
+            
+                
+                <article class="project-card">
+                    
+                    <div class="proj-img-wrapper">
+                        <img src="../img/gifs/jimner.gif" class="img-after" alt="jimner - Jimut's banner CLI demo" />
+                        <img src="../img/project_img/17_jimner_thumb.jpg" class="img-before" alt="jimner - Jimut's banner CLI static" />
+                    </div>
+
+                    <div class="proj-content">
+                        
+                        
+                            <a href="projects/jimner.html" class="proj-title">jimner - Jimut's banner CLI</a>
+                        
+
+                        <div class="proj-authors">Jimut Bahan Pal</div>
+
+                        <div class="proj-desc">A banner prototype for CLI/ UNIX / LINUX /WINDOWS. ASCII art!</div>
+
+                        <div class="badge-container">
+                            
+                            
+
+                            
+                                <a href="https://github.com/Jimut123/jimner" target="_blank" class="proj-badge badge-code">
+                                    <i class="fab fa-github"></i> Code
+                                </a>
+                            
+
+                            
+
+                            
+
+                            
+                                <a href="../softwares/jimner-1.2.3.tar.gz" target="_blank" class="proj-badge">
+                                    <i class="fas fa-download"></i> Download
+                                </a>
+                            
+
+                            
+                                <a href="https://pypi.org/project/jimner/" target="_blank" class="proj-badge">
+                                    <i class="fas fa-box"></i> PyPI
+                                </a>
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                        </div> </div> </article>
+
+            
+
+        
+
+            
+                
+                <article class="project-card">
+                    
+                    <div class="proj-img-wrapper">
+                        <img src="../img/project_img/roller_madness_2_thumb.jpg" class="img-after" alt="ROLLER MADNESS GAME. demo" />
+                        <img src="../img/project_img/2_roller_m_thumb.jpg" class="img-before" alt="ROLLER MADNESS GAME. static" />
+                    </div>
+
+                    <div class="proj-content">
+                        
+                        
+                            <a href="projects/roller_madness.html" class="proj-title">ROLLER MADNESS GAME.</a>
+                        
+
+                        <div class="proj-authors">Jimut Bahan Pal</div>
+
+                        <div class="proj-desc">Game built in Unity3D.</div>
+
+                        <div class="badge-container">
+                            
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                                <a href="https://www.youtube.com/watch?v=_IUDdGH_Utg&amp;list=PLOmLd6CrOu1N5U3OkPl9esFHQmvoauR5h&amp;index=7&amp;t=38s" target="_blank" class="proj-badge badge-video">
+                                    <i class="fab fa-youtube"></i> Video
+                                </a>
+                            
+
+                            
+                                <a href="https://drive.google.com/open?id=0B2dTSg5wS1lMTC05Zl9OZmpDam8" target="_blank" class="proj-badge">
+                                    <i class="fab fa-google-drive"></i> Drive
+                                </a>
+                            
+
+                            
+
+                            
+                                <a href="../games/RollerMadness2/index.html" target="_blank" class="proj-badge badge-game">
+                                    <i class="fas fa-gamepad"></i> Play Online
+                                </a>
+                            
+
+                            
+
+                        </div> </div> </article>
+
+            
+
+        
+
+            
+                
+                <article class="project-card">
+                    
+                    <div class="proj-img-wrapper">
+                        <img src="../img/project_img/box_shooter_2_thumb.jpg" class="img-after" alt="Box Shooter Game demo" />
+                        <img src="../img/project_img/3_box_Shooter_thumb.jpg" class="img-before" alt="Box Shooter Game static" />
+                    </div>
+
+                    <div class="proj-content">
+                        
+                        
+                            <a href="projects/box_shooter.html" class="proj-title">Box Shooter Game</a>
+                        
+
+                        <div class="proj-authors">Jimut Bahan Pal</div>
+
+                        <div class="proj-desc">Game built in Unity3D.</div>
+
+                        <div class="badge-container">
+                            
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                                <a href="https://www.youtube.com/watch?v=McUomk0mlHA&amp;list=PLOmLd6CrOu1N5U3OkPl9esFHQmvoauR5h&amp;index=6&amp;t=0s" target="_blank" class="proj-badge badge-video">
+                                    <i class="fab fa-youtube"></i> Video
+                                </a>
+                            
+
+                            
+                                <a href="https://drive.google.com/open?id=0B2dTSg5wS1lMXzJZTjRrTDJ3YmM" target="_blank" class="proj-badge">
+                                    <i class="fab fa-google-drive"></i> Drive
+                                </a>
+                            
+
+                            
+
+                            
+                                <a href="../games/BoxShooter2/index.html" target="_blank" class="proj-badge badge-game">
+                                    <i class="fas fa-gamepad"></i> Play Online
+                                </a>
+                            
+
+                            
+
+                        </div> </div> </article>
+
+            
+
+        
+
+            
+                
+                <article class="project-card">
+                    
+                    <div class="proj-img-wrapper">
+                        <img src="../img/project_img/sparty_brothers_thumb.jpg" class="img-after" alt="Super Sparty Brothers 2D demo" />
+                        <img src="../img/project_img/6_sparty_bro_thumb.jpg" class="img-before" alt="Super Sparty Brothers 2D static" />
+                    </div>
+
+                    <div class="proj-content">
+                        
+                        
+                            <a href="projects/super_sparty.html" class="proj-title">Super Sparty Brothers 2D</a>
+                        
+
+                        <div class="proj-authors">Jimut Bahan Pal</div>
+
+                        <div class="proj-desc">Mario like game.</div>
+
+                        <div class="badge-container">
+                            
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                                <a href="https://www.youtube.com/watch?v=9engqo-B7Oc&amp;list=PLOmLd6CrOu1N5U3OkPl9esFHQmvoauR5h&amp;index=5&amp;t=98s" target="_blank" class="proj-badge badge-video">
+                                    <i class="fab fa-youtube"></i> Video
+                                </a>
+                            
+
+                            
+                                <a href="https://drive.google.com/open?id=0B2dTSg5wS1lMNXR6akM5QW84YlE" target="_blank" class="proj-badge">
+                                    <i class="fab fa-google-drive"></i> Drive
+                                </a>
+                            
+
+                            
+
+                            
+                                <a href="../games/SuperSpartyBrothers/index.html" target="_blank" class="proj-badge badge-game">
+                                    <i class="fas fa-gamepad"></i> Play Online
+                                </a>
+                            
+
+                            
+
+                        </div> </div> </article>
+
+            
+
+        
+
+            
+                
+                <article class="project-card">
+                    
+                    <div class="proj-img-wrapper">
+                        <img src="../img/project_img/solar_system_simulation2_thumb.jpg" class="img-after" alt="Solar System Simulation demo" />
+                        <img src="../img/project_img/10_solar_sys_thumb.jpg" class="img-before" alt="Solar System Simulation static" />
+                    </div>
+
+                    <div class="proj-content">
+                        
+                        
+                            <a href="projects/solar_system.html" class="proj-title">Solar System Simulation</a>
+                        
+
+                        <div class="proj-authors">Jimut Bahan Pal</div>
+
+                        <div class="proj-desc">Playing with unity 3D simulations!</div>
+
+                        <div class="badge-container">
+                            
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                                <a href="https://www.youtube.com/watch?v=D9KlqzQTAWQ&amp;list=PLOmLd6CrOu1N5U3OkPl9esFHQmvoauR5h&amp;index=9&amp;t=0s" target="_blank" class="proj-badge badge-video">
+                                    <i class="fab fa-youtube"></i> Video
+                                </a>
+                            
+
+                            
+                                <a href="https://drive.google.com/open?id=0B2dTSg5wS1lMOTBIS3RBR20xUjA" target="_blank" class="proj-badge">
+                                    <i class="fab fa-google-drive"></i> Drive
+                                </a>
+                            
+
+                            
+
+                            
+                                <a href="../games/solar_system/index.html" target="_blank" class="proj-badge badge-game">
+                                    <i class="fas fa-gamepad"></i> Play Online
+                                </a>
+                            
+
+                            
+
+                        </div> </div> </article>
+
+            
+
+        
+
+            
+                
+                <article class="project-card">
+                    
+                    <div class="proj-img-wrapper">
+                        <img src="../img/project_img/5_shooter_game_2_thumb.jpg" class="img-after" alt="FPS GAME beta demo" />
+                        <img src="../img/project_img/5_shooter_game_thumb.jpg" class="img-before" alt="FPS GAME beta static" />
+                    </div>
+
+                    <div class="proj-content">
+                        
+                        
+                            <a href="projects/fps.html" class="proj-title">FPS GAME beta</a>
+                        
+
+                        <div class="proj-authors">Jimut Bahan Pal</div>
+
+                        <div class="proj-desc">FPS game built in Unity3D!</div>
+
+                        <div class="badge-container">
+                            
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                                <a href="https://www.youtube.com/watch?v=UshjuzTzDEQ&amp;list=PLOmLd6CrOu1N5U3OkPl9esFHQmvoauR5h&amp;index=8&amp;t=41s" target="_blank" class="proj-badge badge-video">
+                                    <i class="fab fa-youtube"></i> Video
+                                </a>
+                            
+
+                            
+                                <a href="https://drive.google.com/file/d/0B2dTSg5wS1lMcmsxZnN6SS01SlE/view" target="_blank" class="proj-badge">
+                                    <i class="fab fa-google-drive"></i> Drive
+                                </a>
+                            
+
+                            
+
+                            
+
+                            
+
+                        </div> </div> </article>
+
+            
+
+        
+
+            
+                
+                <article class="project-card">
+                    
+                    <div class="proj-img-wrapper">
+                        <img src="../img/project_img/7_pong_game_2_thumb.jpg" class="img-after" alt="Classic Pong Game demo" />
+                        <img src="../img/project_img/7_pong_game_thumb.jpg" class="img-before" alt="Classic Pong Game static" />
+                    </div>
+
+                    <div class="proj-content">
+                        
+                        
+                            <a href="projects/pong.html" class="proj-title">Classic Pong Game</a>
+                        
+
+                        <div class="proj-authors">Jimut Bahan Pal</div>
+
+                        <div class="proj-desc">A game developed in Codeskulptor.</div>
+
+                        <div class="badge-container">
+                            
+                            
+
+                            
+                                <a href="https://github.com/Jimut123/code_skulptor_pygames/tree/master/pong_game" target="_blank" class="proj-badge badge-code">
+                                    <i class="fab fa-github"></i> Code
+                                </a>
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                                <a href="https://www.youtube.com/watch?v=6k1Zg7RyYMI&amp;list=PLOmLd6CrOu1N5U3OkPl9esFHQmvoauR5h&amp;index=3&amp;t=0s" target="_blank" class="proj-badge badge-video">
+                                    <i class="fab fa-youtube"></i> Video
+                                </a>
+                            
+
+                            
+
+                            
+
+                            
+                                <a href="http://www.codeskulptor.org/#user45_pi4J7rtsjQ_10.py" target="_blank" class="proj-badge badge-game">
+                                    <i class="fas fa-gamepad"></i> Play Online
+                                </a>
+                            
+
+                            
+
+                        </div> </div> </article>
+
+            
+
+        
+
+            
+                
+                <article class="project-card">
+                    
+                    <div class="proj-img-wrapper">
+                        <img src="../img/project_img/8_memory_game_thumb.jpg" class="img-after" alt="Classic Memory Game demo" />
+                        <img src="../img/project_img/8_memory_game_1_thumb.jpg" class="img-before" alt="Classic Memory Game static" />
+                    </div>
+
+                    <div class="proj-content">
+                        
+                        
+                            <a href="projects/memory_game.html" class="proj-title">Classic Memory Game</a>
+                        
+
+                        <div class="proj-authors">Jimut Bahan Pal</div>
+
+                        <div class="proj-desc">A game developed in Codeskulptor.</div>
+
+                        <div class="badge-container">
+                            
+                            
+
+                            
+                                <a href="https://github.com/Jimut123/code_skulptor_pygames/tree/master/memory_game" target="_blank" class="proj-badge badge-code">
+                                    <i class="fab fa-github"></i> Code
+                                </a>
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                                <a href="https://www.youtube.com/watch?v=cgjqz4ZgcB4&amp;list=PLOmLd6CrOu1N5U3OkPl9esFHQmvoauR5h&amp;index=2&amp;t=0s" target="_blank" class="proj-badge badge-video">
+                                    <i class="fab fa-youtube"></i> Video
+                                </a>
+                            
+
+                            
+
+                            
+
+                            
+                                <a href="http://www.codeskulptor.org/#user45_f3dkgFG4r7_27.py" target="_blank" class="proj-badge badge-game">
+                                    <i class="fas fa-gamepad"></i> Play Online
+                                </a>
+                            
+
+                            
+
+                        </div> </div> </article>
+
+            
+
+        
+
+            
+                
+                <article class="project-card">
+                    
+                    <div class="proj-img-wrapper">
+                        <img src="../img/project_img/stopwatch1_thumb.jpg" class="img-after" alt="A Stopwatch Game demo" />
+                        <img src="../img/project_img/9_stopwatch_game_thumb.jpg" class="img-before" alt="A Stopwatch Game static" />
+                    </div>
+
+                    <div class="proj-content">
+                        
+                        
+                            <a href="projects/stopwatch_game.html" class="proj-title">A Stopwatch Game</a>
+                        
+
+                        <div class="proj-authors">Jimut Bahan Pal</div>
+
+                        <div class="proj-desc">A game developed in Codeskulptor.</div>
+
+                        <div class="badge-container">
+                            
+                            
+
+                            
+                                <a href="https://github.com/Jimut123/code_skulptor_pygames/tree/master/stop_watch_game" target="_blank" class="proj-badge badge-code">
+                                    <i class="fab fa-github"></i> Code
+                                </a>
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                                <a href="https://www.youtube.com/watch?v=krr5AYbTNkQ&amp;list=PLOmLd6CrOu1N5U3OkPl9esFHQmvoauR5h&amp;index=4&amp;t=6s" target="_blank" class="proj-badge badge-video">
+                                    <i class="fab fa-youtube"></i> Video
+                                </a>
+                            
+
+                            
+
+                            
+
+                            
+                                <a href="http://www.codeskulptor.org/#user45_dro3O7RRYa_16.py" target="_blank" class="proj-badge badge-game">
+                                    <i class="fas fa-gamepad"></i> Play Online
+                                </a>
+                            
+
+                            
+
+                        </div> </div> </article>
+
+            
+
+        
+
+            
+                
+                <article class="project-card">
+                    
+                    <div class="proj-img-wrapper">
+                        <img src="../img/project_img/11_email_sent_thumb.jpg" class="img-after" alt="Spammify demo" />
+                        <img src="../img/project_img/spammify_1_thumb.jpg" class="img-before" alt="Spammify static" />
+                    </div>
+
+                    <div class="proj-content">
+                        
+                        
+                            <a href="projects/spammify.html" class="proj-title">Spammify</a>
+                        
+
+                        <div class="proj-authors">Jimut Bahan Pal</div>
+
+                        <div class="proj-desc">To send spam emails with ease!</div>
+
+                        <div class="badge-container">
+                            
+                            
+
+                            
+                                <a href="https://github.com/Jimut123/spammify" target="_blank" class="proj-badge badge-code">
+                                    <i class="fab fa-github"></i> Code
+                                </a>
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                                <a href="https://www.youtube.com/watch?v=bGN_OjrQ2Ns&amp;t=3s" target="_blank" class="proj-badge badge-video">
+                                    <i class="fab fa-youtube"></i> Video
+                                </a>
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                        </div> </div> </article>
+
+            
+
+        
+
+            
+                
+                <article class="project-card">
+                    
+                    <div class="proj-img-wrapper">
+                        <img src="../img/project_img/12_scrawll_thumb.jpg" class="img-after" alt="Scrawll demo" />
+                        <img src="../img/project_img/scrawll_1_thumb.jpg" class="img-before" alt="Scrawll static" />
+                    </div>
+
+                    <div class="proj-content">
+                        
+                        
+                            <a href="projects/scrawll.html" class="proj-title">Scrawll</a>
+                        
+
+                        <div class="proj-authors">Jimut Bahan Pal</div>
+
+                        <div class="proj-desc">To download HD wallpapers with ease</div>
+
+                        <div class="badge-container">
+                            
+                            
+
+                            
+                                <a href="https://github.com/Jimut123/Scrawll" target="_blank" class="proj-badge badge-code">
+                                    <i class="fab fa-github"></i> Code
+                                </a>
+                            
+
+                            
+
+                            
+
+                            
+                                <a href="../softwares/Scrawll-0.1-py3.7.egg" target="_blank" class="proj-badge">
+                                    <i class="fas fa-download"></i> Download
+                                </a>
+                            
+
+                            
+
+                            
+                                <a href="https://www.youtube.com/watch?v=hfSvzq-5HZg&amp;t=4s" target="_blank" class="proj-badge badge-video">
+                                    <i class="fab fa-youtube"></i> Video
+                                </a>
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                        </div> </div> </article>
+
+            
+
+        
+
+            
+                
+                <article class="project-card">
+                    
+                    <div class="proj-img-wrapper">
+                        <img src="../img/gifs/crawler.gif" class="img-after" alt="Pager Rank and Web Crawler demo" />
+                        <img src="../img/project_img/13_pager_rank_thumb.jpg" class="img-before" alt="Pager Rank and Web Crawler static" />
+                    </div>
+
+                    <div class="proj-content">
+                        
+                        
+                            <a href="projects/crawler.html" class="proj-title">Pager Rank and Web Crawler</a>
+                        
+
+                        <div class="proj-authors">Jimut Bahan Pal</div>
+
+                        <div class="proj-desc">A crawler build in Python3 which ranks pages according to pager rank algorithm</div>
+
+                        <div class="badge-container">
+                            
+                            
+
+                            
+                                <a href="https://github.com/Jimut123/prog_backups/tree/master/python/coursera_python/MICHIGAN/code3/pagerank" target="_blank" class="proj-badge badge-code">
+                                    <i class="fab fa-github"></i> Code
+                                </a>
+                            
+
+                            
+
+                            
+
+                            
+                                <a href="../softwares/pagerank.tar.gz" target="_blank" class="proj-badge">
+                                    <i class="fas fa-download"></i> Download
+                                </a>
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                                <a href="../blogs/pagerRank/force.html" target="_blank" class="proj-badge">
+                                    <i class="fas fa-eye"></i> Show
+                                </a>
+                            
+
+                            
+
+                            
+
+                        </div> </div> </article>
+
+            
+
+        
+
+            
+                
+                <article class="project-card">
+                    
+                    <div class="proj-img-wrapper">
+                        <img src="../img/project_img/jimutbahanpal_website2_thumb.jpg" class="img-after" alt="Portfolio Page demo" />
+                        <img src="../img/project_img/jimutbahanpal_website1_thumb.jpg" class="img-before" alt="Portfolio Page static" />
+                    </div>
+
+                    <div class="proj-content">
+                        
+                        
+                            <a href="https://jimut123.github.io/" class="proj-title">Portfolio Page</a>
+                        
+
+                        <div class="proj-authors">Jimut Bahan Pal</div>
+
+                        <div class="proj-desc">My personal webpage framework build from scratch using Jekyll, Python3, HTML, CSS, and JS. Contains web page generators build using Ruby.</div>
+
+                        <div class="badge-container">
+                            
+                            
+
+                            
+                                <a href="https://github.com/Jimut123/Jimut123.github.io" target="_blank" class="proj-badge badge-code">
+                                    <i class="fab fa-github"></i> Code
+                                </a>
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                        </div> </div> </article>
+
+            
+
+        
+
+    </div>
+</div>
+
+
+
+      <br><br>
+      
+    </div>
+
+  
+
+
+  <!-- Footer -->
+  <footer class="footer page-footer font-small pt-1">
+    <div  align="center">
+      
+          <!-- Copyright -->
+          <div class="footer-copyright" style="color: rgb(217, 61, 61);"> 2019-2026
+              <a href="https://github.com/Jimut123" style="color: rgb(217, 61, 61);"> Copyright © Jimut Bahan Pal</a>
+          </div>
+          <!-- Copyright -->
+    </div>
+  </footer>
+  <!-- Footer -->
+
+
+
+</body>
+</html>
+<style>
+.footer{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+
+}
+</style>
+
+
+<script>
+  var preloader = document.getElementById('loading');
+  function myFunction() { 
+      preloader.style.display = 'none';
+  }
+</script>

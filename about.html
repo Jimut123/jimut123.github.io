@@ -1,0 +1,873 @@
+<!doctype html>
+
+<!-- DNS Preconnect for faster external resource loading -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdnjs.cloudflare.com">
+<link rel="preconnect" href="https://mdbootstrap.com">
+
+<link href="https://fonts.googleapis.com/css?family=Cardo&display=swap" rel="stylesheet"> 
+
+<!--
+<link rel="stylesheet" href="/css/compiled-4.8.0.min.css"></link>
+-->
+
+<link rel="shortcut icon" type="image/x-icon" href="../img/thumbnail.jpg">
+
+
+<!-- Bootstrap core CSS -->
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Material Design Bootstrap -->
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.0/css/mdb.min.css" rel="stylesheet">
+
+
+
+<!-- jQuery must be loaded before Bootstrap JavaScript -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+<!-- Bootstrap core JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+<!-- Lazy loading of Gallery and stuffs!-->
+
+<script src="../js/jimjs.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<link rel = "stylesheet" type = "text/css" href = "../css/jimstyle.css" />
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Jimut Bahan Pal" />
+    <meta name="description" content="Personal website of Jimut Bahan Pal - Researcher, Developer, and Machine Learning enthusiast. Explore projects, publications, blogs, and more.">
+    <meta name="keywords" content="Jimut Bahan Pal, machine learning, deep learning, computer vision, IIT Bombay, research, projects, publications">
+    <meta name="google-site-verification" content="2SC5t4-rLXOS1eAW-l2YL_qFLuIJW2vSRZNduyOGKN0" />
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://jimut123.github.io/about.html">
+    
+    <!-- Open Graph Meta Tags for Social Sharing -->
+    <meta property="og:title" content="About">
+    <meta property="og:description" content="Personal website of Jimut Bahan Pal - Researcher, Developer, and Machine Learning enthusiast. Explore projects, publications, blogs, and more.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://jimut123.github.io/about.html">
+    <meta property="og:image" content="https://jimut123.github.io/img/jimut.jpeg">
+    <meta property="og:site_name" content="Jimut Bahan Pal - Personal Website">
+    <meta property="og:locale" content="en_IN">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="About">
+    <meta name="twitter:description" content="Personal website of Jimut Bahan Pal - Researcher, Developer, and Machine Learning enthusiast. Explore projects, publications, blogs, and more.">
+    <meta name="twitter:image" content="https://jimut123.github.io/img/jimut.jpeg">
+    <meta name="twitter:creator" content="@jimut_pal">
+    
+    <!-- Additional SEO Meta Tags -->
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow, max-image-preview:large">
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-140291358-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-140291358-1');
+    </script>
+
+    
+    <title> About </title>
+  </head>
+
+  <body onload = "myFunction()">
+    <div id="loading"> </div>
+    
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        /* --- 1. THEME VARIABLES --- */
+        :root {
+            --site-bg: #ffffff;
+            --site-text: #333333;
+            
+            /* Light Mode Navbar */
+            --nav-glass-bg: rgba(255, 255, 255, 0.85);
+            --nav-border: rgba(0, 0, 0, 0.05);
+            --nav-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+            --nav-text: #444444;
+            --nav-accent: #18a236;
+            --nav-hover-bg: rgba(24, 162, 54, 0.08);
+            
+            /* ICON STYLE: Gray by default */
+            --icon-filter: grayscale(100%) opacity(0.7); 
+            --icon-filter-hover: grayscale(0%) opacity(1);
+        }
+
+        [data-theme="dark"] {
+            --site-bg: #121212;
+            --site-text: #f0f0f0;
+            
+            /* Dark Mode Navbar */
+            --nav-glass-bg: rgba(18, 18, 18, 0.85);
+            --nav-border: rgba(255, 255, 255, 0.1);
+            --nav-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+            --nav-text: #e0e0e0;
+            --nav-accent: #4ade80;
+            --nav-hover-bg: rgba(74, 222, 128, 0.15);
+            
+            /* ICON STYLE DARK MODE: Invert colors so black icons become white/gray */
+            --icon-filter: grayscale(100%) invert(1) opacity(0.8);
+            --icon-filter-hover: grayscale(0%) invert(1) opacity(1); 
+        }
+
+        body {
+            background-color: var(--site-bg);
+            color: var(--site-text);
+            transition: background-color 0.3s ease, color 0.3s ease;
+            margin: 0;
+        }
+
+        /* --- 2. NAVBAR STYLING --- */
+        .glass-navbar {
+            background: var(--nav-glass-bg) !important;
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--nav-border);
+            box-shadow: var(--nav-shadow);
+            padding: 0.8rem 1rem !important;
+            transition: all 0.3s ease;
+            position: sticky;
+            top: 0;
+            z-index: 1030;
+        }
+
+        .glass-navbar .nav-link {
+            font-family: 'Poppins', sans-serif;
+            color: var(--nav-text) !important;
+            font-weight: 500;
+            font-size: 0.9rem;
+            padding: 8px 16px !important;
+            border-radius: 8px;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* ICON STYLING */
+        .glass-navbar .nav-link img {
+            transition: transform 0.2s ease, filter 0.3s ease;
+            filter: var(--icon-filter);
+        }
+
+        /* HOVER EFFECTS */
+        .glass-navbar .nav-link:hover {
+            background-color: var(--nav-hover-bg) !important;
+            color: var(--nav-accent) !important;
+        }
+        
+        .glass-navbar .nav-link:hover img {
+            transform: scale(1.2) rotate(-5deg);
+            filter: var(--icon-filter-hover);
+        }
+
+        /* Active State */
+        .glass-navbar .nav-item.active .nav-link {
+            color: var(--nav-accent) !important;
+            font-weight: 600;
+        }
+        
+        .glass-navbar .nav-item.active .nav-link img {
+            filter: var(--icon-filter-hover);
+        }
+
+        /* Underline Animation */
+        .glass-navbar .nav-item { position: relative; }
+        .glass-navbar .nav-item::after {
+            content: '';
+            position: absolute;
+            bottom: 2px;
+            left: 50%;
+            width: 0%;
+            height: 3px;
+            background: var(--nav-accent);
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+            border-radius: 2px;
+        }
+        .glass-navbar .nav-item.active::after { width: 70%; }
+
+        /* --- 3. THEME BUTTON --- */
+        #theme-toggle {
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            font-size: 1.6rem;
+            padding: 5px;
+            line-height: 1;
+            color: var(--nav-text);
+            transition: transform 0.3s;
+        }
+        #theme-toggle:hover { transform: rotate(45deg) scale(1.1); }
+        #theme-toggle:focus { outline: none; }
+
+        /* --- 4. CUSTOM HAMBURGER BUTTON (RENAMED CLASSES) --- */
+        .custom-menu-btn {
+            border: none;
+            background: transparent;
+            cursor: pointer;
+            padding: 10px;
+            width: 45px;
+            height: 45px;
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+            position: relative;
+            z-index: 1031;
+        }
+        
+        /* Show hamburger only on mobile */
+        @media (max-width: 991px) {
+            .custom-menu-btn {
+                display: flex;
+            }
+        }
+        
+        .custom-menu-btn:focus {
+            outline: none;
+            box-shadow: none;
+        }
+        
+        .menu-line {
+            display: block;
+            width: 26px;
+            height: 3px;
+            background-color: var(--nav-text);
+            transition: all 0.3s ease-in-out;
+            border-radius: 2px;
+        }
+
+        /* X transformation when open */
+        .custom-menu-btn.menu-open .menu-line:nth-child(1) {
+            transform: translateY(8px) rotate(45deg);
+            background-color: var(--nav-accent);
+        }
+
+        .custom-menu-btn.menu-open .menu-line:nth-child(2) { 
+            opacity: 0; 
+            transform: translateX(20px);
+        }
+
+        .custom-menu-btn.menu-open .menu-line:nth-child(3) {
+            transform: translateY(-8px) rotate(-45deg);
+            background-color: var(--nav-accent);
+        }
+
+        @media (max-width: 991px) {
+            .glass-navbar .navbar-collapse {
+                background: var(--site-bg);
+                padding: 15px;
+                border-radius: 12px;
+                margin-top: 15px;
+                border: 1px solid var(--nav-border);
+                box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            }
+            .glass-navbar .nav-item::after { display: none; }
+            .glass-navbar .nav-item.active .nav-link {
+                border-left: 4px solid var(--nav-accent);
+                background-color: var(--nav-hover-bg) !important;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg glass-navbar">
+    <div class="container-fluid">
+        
+        <div class="navbar-brand">
+            <button id="theme-toggle" aria-label="Switch Theme">
+                <span id="theme-icon">🌞</span>
+            </button>
+        </div>
+
+        <button class="custom-menu-btn" type="button" id="menuToggle" aria-label="Toggle navigation" aria-controls="mainNav" aria-expanded="false">
+            <span class="menu-line"></span>
+            <span class="menu-line"></span>
+            <span class="menu-line"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-end" id="mainNav">
+            <ul class="navbar-nav">
+                
+                    <li class="nav-item">
+                        <a href="/" class="nav-link">
+                            
+                            
+                                <img src="/img/icons/home.svg" alt="icon" height="20px" width="20px">
+                            
+                            
+                            <span>Home</span>
+                        </a>
+                    </li>
+                
+                    <li class="nav-item">
+                        <a href="/publications.html" class="nav-link">
+                            
+                            
+                                <img src="/img/icons/publications.png" alt="icon" height="20px" width="20px">
+                            
+                            
+                            <span>Publications</span>
+                        </a>
+                    </li>
+                
+                    <li class="nav-item">
+                        <a href="/blog.html" class="nav-link">
+                            
+                            
+                                <img src="/img/icons/blog.svg" alt="icon" height="20px" width="20px">
+                            
+                            
+                            <span>Blog</span>
+                        </a>
+                    </li>
+                
+                    <li class="nav-item">
+                        <a href="/projects.html" class="nav-link">
+                            
+                            
+                                <img src="/img/icons/projects.jpg" alt="icon" height="20px" width="20px">
+                            
+                            
+                            <span>Projects</span>
+                        </a>
+                    </li>
+                
+                    <li class="nav-item">
+                        <a href="/random.html" class="nav-link">
+                            
+                            
+                                <img src="/img/icons/certificates.png" alt="icon" height="20px" width="20px">
+                            
+                            
+                            <span>Random</span>
+                        </a>
+                    </li>
+                
+                    <li class="nav-item">
+                        <a href="/search/" class="nav-link">
+                            
+                            
+                                <img src="/img/icons/search.png" alt="icon" height="20px" width="20px">
+                            
+                            
+                            <span>Search</span>
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+    const toggleButton = document.getElementById('theme-toggle');
+    const themeIcon = document.getElementById('theme-icon');
+    const body = document.body;
+
+    // Theme Logic
+    const currentTheme = localStorage.getItem('theme');
+    if (currentTheme) {
+        body.setAttribute('data-theme', currentTheme);
+        themeIcon.textContent = currentTheme === 'dark' ? '🌜' : '🌞';
+    } else {
+        body.setAttribute('data-theme', 'light');
+    }
+
+    toggleButton.addEventListener('click', () => {
+        const currentTheme = body.getAttribute('data-theme');
+        const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+        body.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
+        themeIcon.textContent = newTheme === 'dark' ? '🌜' : '🌞';
+    });
+
+    // Mobile menu toggle (works without Bootstrap collapse plugin)
+    const menuBtn = document.getElementById('menuToggle');
+    const navCollapse = document.getElementById('mainNav');
+
+    function setMenuState(isOpen) {
+        menuBtn.classList.toggle('menu-open', isOpen);
+        navCollapse.classList.toggle('show', isOpen);
+        menuBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    }
+
+    menuBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        setMenuState(!navCollapse.classList.contains('show'));
+    });
+
+    document.addEventListener('click', function(e) {
+        if (window.innerWidth <= 991 && !menuBtn.contains(e.target) && !navCollapse.contains(e.target)) {
+            setMenuState(false);
+        }
+    });
+
+    window.addEventListener('resize', function() {
+        if (window.innerWidth > 991) {
+            setMenuState(false);
+        }
+    });
+
+    // Active Link Logic
+    $(function() {
+        var url = window.location.href;
+        $(".glass-navbar a.nav-link").each(function() {
+            if (url == (this.href)) {
+                $(this).closest(".nav-item").addClass("active");
+            }
+        });
+    });
+</script>
+
+</body>
+</html>
+
+    <div align="center">  
+      <br><br>
+      
+      <link href="https://fonts.googleapis.com/css?family=Playfair+Display&amp;display=swap" rel="stylesheet" />
+
+<h1>
+    <b style="font-family: 'Playfair Display', serif;"> ABOUT</b>
+</h1>
+
+<link rel="stylesheet" type="text/css" href="../css/jimstyle.css" />
+
+<link href="https://fonts.googleapis.com/css?family=Cardo&amp;display=swap" rel="stylesheet" />
+
+<div id="pad-container">
+    <div id="exp-font">
+            <div class="container" algin="center">
+                
+              <div align="center">    
+                Download  [<a href="../files/jimut_resume.pdf" target="_blank"><strong>Resume</strong> :  <img src="../img/icons/cv.png" width="30px" /> </a>] 
+                [<a href="../files/cv.pdf" target="_blank"> <strong>Old CV</strong> : <img src="../img/icons/cv.png" width="30px" /> </a>]
+              </div>
+
+
+            <div class="container">
+                <div class="timeline">
+                    <div class="timeline-month">
+                    <a id="date"></a>
+                    
+                    </div>
+
+
+                    
+
+
+                        <div class="timeline-section">
+                          <div class="timeline-date">
+                          
+                              2021
+                          
+                          </div>
+
+                          <div class="row">
+                              <div class="col-sm-4">
+                              <div class="timeline-box">
+                                  <div class="box-title">
+                                  
+
+
+                                  
+
+                                    
+                                      <a href="http://cs.rkmvu.ac.in/" alt="link" target="_blank">Ramkrishna Mission Vivekananda Educational and Research Institute(RKMVERI)</a>
+                                    
+
+                                  
+                                  
+
+                                  </div>
+                                  <div class="box-content">
+                                  
+                                  
+                                    <img src="../img/icons/rkm.png" alt="icon" width="50%" height="50%" />
+                                  
+
+                                  <div class="box-item"> 
+                                  
+                                  M.Sc. Computer Science 
+                                  
+                                  </div>
+                                
+                                  </div>
+                                  <div class="box-footer"> 
+                                  
+                                    2019 
+                                  
+                                  -
+                                  
+                                  2021
+                                  
+                                  </div>
+                              </div>
+                              </div>
+
+
+
+
+                              <div class="col-sm-8">
+                                <div class="timeline-box">
+                                    <div class="box-title">
+                                     Summary   
+                                    </div>
+
+                                    <div class="box-content">
+                                    
+                                    
+                                        The thing that I like the most about this institution is its flexibility in changing to any kind of curriculum when the student’s need arises. Here I have been nurtured by some of the state-of-the art research topics in diverse field which is not available in any university in our state. Have been supervised by some of the best faculties in India, and learned a lot from them. The rigorous training phase of my life will bear fruit sometime in the future.
+                                    
+  
+                                                                     
+                                    </div>
+
+                                </div>
+                                </div>
+
+
+
+
+
+                          </div>
+
+                          </div>
+
+                    
+
+
+                        <div class="timeline-section">
+                          <div class="timeline-date">
+                          
+                              2019
+                          
+                          </div>
+
+                          <div class="row">
+                              <div class="col-sm-4">
+                              <div class="timeline-box">
+                                  <div class="box-title">
+                                  
+
+
+                                  
+
+                                    
+                                      <a href="http://www.sxccal.edu/" alt="link" target="_blank">St. Xavier's College</a>
+                                    
+
+                                  
+                                  
+
+                                  </div>
+                                  <div class="box-content">
+                                  
+                                  
+                                    <img src="../img/icons/sxc_logo.jpg" alt="icon" width="50%" height="50%" />
+                                  
+
+                                  <div class="box-item"> 
+                                  
+                                  B.Sc. Computer Science (Hons.) 
+                                  
+                                  </div>
+                                
+                                  </div>
+                                  <div class="box-footer"> 
+                                  
+                                    2016 
+                                  
+                                  -
+                                  
+                                  2019
+                                  
+                                  </div>
+                              </div>
+                              </div>
+
+
+
+
+                              <div class="col-sm-8">
+                                <div class="timeline-box">
+                                    <div class="box-title">
+                                     Summary   
+                                    </div>
+
+                                    <div class="box-content">
+                                    
+                                    
+                                        Always wanted to study here, and finally dream came true after getting 95.75% in ISC. I found out that getting marks in not relevant anymore and there are many folks who are equally good as me. Did much of development and extracurricular stuffs related to  <a href="../projects.html" target="_blank"> software </a>, like developed <a href="../xavo2018/" target="_blank"> Xavotsav website </a> <a href="https://drive.google.com/file/d/0B51qRUWxSiZRcS1uZEJRVGRlRjg/view" target="_blank">, attended blood donation camps </a>, been <a href="../files/achi/13_badge2.png" target="_blank"> event head </a> at some competitions also winning in <a href="../files/achi/14_mem5.png" target="_blank"> some </a>, and attended several workshops on the way. Made some really great friends Bodhi and Nilayan who did his job quite well in <a href="https://www.youtube.com/watch?v=CU52Ad7Cw4E" target="_blank">hardware (3D printer) </a>  <a href="https://drive.google.com/file/d/1G6acFUb1nusVIOF5A7fKzERGwOSH5VL3/view" target="_blank">and stuffs </a>. Also conducted certain events like <a href="../img/gallery/mlcc_sxc_2019.jpg" target="_blank"> Google MLCC </a> along with <a href="../img/gallery/paikhala_sxcnss_2019.jpg" target="_blank"> coordinating others (National Service Scheme [NSS]) </a>, and even been head of <a href="../img/gallery/Analytica_2018.JPG" target="_blank"> Graphics design team </a>. Learnt that knowledge is everything, and we need to do other things apart from just studies. This is the time where I realized how good I am in extracurricular activities and <a href="../certificates.html" target="_blank"> learning online </a> by doing <a href="../projects.html" target="_blank"> real world projects</a> and co-authoring some papers.
+                                    
+  
+                                                                     
+                                    </div>
+
+                                </div>
+                                </div>
+
+
+
+
+
+                          </div>
+
+                          </div>
+
+                    
+
+
+                        <div class="timeline-section">
+                          <div class="timeline-date">
+                          
+                              2016
+                          
+                          </div>
+
+                          <div class="row">
+                              <div class="col-sm-4">
+                              <div class="timeline-box">
+                                  <div class="box-title">
+                                  
+
+
+                                  
+
+                                    
+                                      <a href="http://www.centralmodernschool.in/" alt="link" target="_blank">Central Modern School</a>
+                                    
+
+                                  
+                                  
+
+                                  </div>
+                                  <div class="box-content">
+                                  
+                                  
+                                    <img src="../img/icons/cms_logo.gif" alt="icon" width="50%" height="50%" />
+                                  
+
+                                  <div class="box-item"> 
+                                  
+                                  ICSE and ISC 
+                                  
+                                  </div>
+                                
+                                  </div>
+                                  <div class="box-footer"> 
+                                  
+                                    2008 
+                                  
+                                  -
+                                  
+                                  2016
+                                  
+                                  </div>
+                              </div>
+                              </div>
+
+
+
+
+                              <div class="col-sm-8">
+                                <div class="timeline-box">
+                                    <div class="box-title">
+                                     Summary   
+                                    </div>
+
+                                    <div class="box-content">
+                                    
+                                    
+                                        Happy to be the part of this institution where I learnt to do extracurricular activities like collecting funds for <a href="../files/achi/4_mem1.png" target="_blank"> blind person’s association </a>, <a href="../files/achi/5_badge1.png" target="_blank"> global cancer concern (India) </a>, been the <a href="../files/achi/6_badge3.png" target="_blank"> class monitor at class 8 </a> (developed leadership qualities on the way), also participated in <a href="../files/achi/7_medal4.png" target="_blank"> sports </a> and constantly <a href="../files/achi/8_medal2.png" target="_blank"> won 3 legged race (gold and silvers) </a>, felicitated from Baranagar municipality two times for getting good score in <a href="../files/achi/9_mem7.png" target="_blank"> class 10 </a> and <a href="../files/achi/10_mem6.png" target="_blank"> 12 </a>, ranked in <a href="https://drive.google.com/file/d/0B51qRUWxSiZRdmNmQmRyRE5HVUU/view" target="_blank"> class 11 </a> and finally left the institution with <a href="../files/achi/12_mem2.png" target="_blank"> good </a> and <a href="../files/achi/11_mem4.png" target="_blank"> sweet memories </a>.
+                                    
+  
+                                                                     
+                                    </div>
+
+                                </div>
+                                </div>
+
+
+
+
+
+                          </div>
+
+                          </div>
+
+                    
+
+
+                        <div class="timeline-section">
+                          <div class="timeline-date">
+                          
+                              2008
+                          
+                          </div>
+
+                          <div class="row">
+                              <div class="col-sm-4">
+                              <div class="timeline-box">
+                                  <div class="box-title">
+                                  
+
+
+                                  
+
+                                    
+                                      <a href="https://www.facebook.com/St.AgnesBranchSchool/" alt="link" target="_blank">St. Agnes Branch School, IIT KGP</a>
+                                    
+
+                                  
+                                  
+
+                                  </div>
+                                  <div class="box-content">
+                                  
+                                  
+                                    <img src="../img/icons/st_agnes_branch_logo.png" alt="icon" width="50%" height="50%" />
+                                  
+
+                                  <div class="box-item"> 
+                                  
+                                  Primary School, till class 5. 
+                                  
+                                  </div>
+                                
+                                  </div>
+                                  <div class="box-footer"> 
+                                  
+                                    2002 
+                                  
+                                  -
+                                  
+                                  2008
+                                  
+                                  </div>
+                              </div>
+                              </div>
+
+
+
+
+                              <div class="col-sm-8">
+                                <div class="timeline-box">
+                                    <div class="box-title">
+                                     Summary   
+                                    </div>
+
+                                    <div class="box-content">
+                                    
+                                    
+                                        One of the most cherishable days in my life in <a href="../files/achi/1_mem3.png" target="_blank"> IIT Kharagpur Campus</a>, mainly focused in everything apart from studies. Made good friends, loved sports and building things with mud. Also, did swimming and occasionally participated in school sports ( from <a href="../files/achi/2_medal1.png" target="_blank"> class 1 </a> and <a href="../files/achi/3_medal3.png" target="_blank"> class 4 </a>).
+                                    
+  
+                                                                     
+                                    </div>
+
+                                </div>
+                                </div>
+
+
+
+
+
+                          </div>
+
+                          </div>
+
+                    
+                    
+                </div>
+                </div>
+
+            </div>
+    </div>
+</div>
+
+<script>
+n =  new Date();
+y = n.getFullYear();
+m = n.getMonth() + 1;
+d = n.getDate();
+document.getElementById("date").innerHTML = d + " - " + m + " - " + y;
+</script>
+
+
+
+      <br><br>
+      
+    </div>
+
+  
+
+
+  <!-- Footer -->
+  <footer class="footer page-footer font-small pt-1">
+    <div  align="center">
+      
+          <!-- Copyright -->
+          <div class="footer-copyright" style="color: rgb(217, 61, 61);"> 2019-2026
+              <a href="https://github.com/Jimut123" style="color: rgb(217, 61, 61);"> Copyright © Jimut Bahan Pal</a>
+          </div>
+          <!-- Copyright -->
+    </div>
+  </footer>
+  <!-- Footer -->
+
+
+
+</body>
+</html>
+<style>
+.footer{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+
+}
+</style>
+
+
+<script>
+  var preloader = document.getElementById('loading');
+  function myFunction() { 
+      preloader.style.display = 'none';
+  }
+</script>
