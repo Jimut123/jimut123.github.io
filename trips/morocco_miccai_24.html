@@ -1,0 +1,1446 @@
+<link href="https://fonts.googleapis.com/css?family=Cardo&display=swap" rel="stylesheet"> 
+
+<!--
+<link rel="stylesheet" href="/css/compiled-4.8.0.min.css">
+-->
+
+<link rel="shortcut icon" type="image/x-icon" href="../img/thumbnail.jpg">
+
+<!-- Bootstrap core CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Material Design Bootstrap -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.0/css/mdb.min.css" rel="stylesheet">
+
+<!-- Bootstrap core JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Lazy loading of Gallery and stuffs!-->
+<script src="../js/jimjs.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<link rel="stylesheet" type="text/css" href="../css/jimstyle.css" />
+
+
+<title>Morocco and Qatar Trip - MICCAI 2024</title>
+
+<style>
+body {
+  /* Add padding to prevent content from being hidden behind fixed footer */
+  padding-bottom: 60px; /* Adjust this value based on your footer height */
+}
+
+.content-wrapper {
+  width: 100%;
+  max-width: 100%;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  text-align: center;
+  /* background-color: #fff; Add background color so text is visible over content */
+  /* box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); Optional: adds slight shadow for separation */
+  z-index: 1000; /* Ensures footer stays on top of other content */
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  /* text-align: center; */
+  /* background-color: #fff; Add background color so text is visible over content */
+  /* box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); Optional: adds slight shadow for separation */
+  z-index: 1000; /* Ensures footer stays on top of other content */
+}
+
+
+#loading {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: #fff;
+  z-index: 9999;
+}
+</style>
+
+<body onload="myFunction()">
+  <div id="loading"></div>
+  
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        /* --- 1. THEME VARIABLES --- */
+        :root {
+            --site-bg: #ffffff;
+            --site-text: #333333;
+            
+            /* Light Mode Navbar */
+            --nav-glass-bg: rgba(255, 255, 255, 0.85);
+            --nav-border: rgba(0, 0, 0, 0.05);
+            --nav-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+            --nav-text: #444444;
+            --nav-accent: #18a236;
+            --nav-hover-bg: rgba(24, 162, 54, 0.08);
+            
+            /* ICON STYLE: Gray by default */
+            --icon-filter: grayscale(100%) opacity(0.7); 
+            --icon-filter-hover: grayscale(0%) opacity(1);
+        }
+
+        [data-theme="dark"] {
+            --site-bg: #121212;
+            --site-text: #f0f0f0;
+            
+            /* Dark Mode Navbar */
+            --nav-glass-bg: rgba(18, 18, 18, 0.85);
+            --nav-border: rgba(255, 255, 255, 0.1);
+            --nav-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+            --nav-text: #e0e0e0;
+            --nav-accent: #4ade80;
+            --nav-hover-bg: rgba(74, 222, 128, 0.15);
+            
+            /* ICON STYLE DARK MODE: Invert colors so black icons become white/gray */
+            --icon-filter: grayscale(100%) invert(1) opacity(0.8);
+            --icon-filter-hover: grayscale(0%) invert(1) opacity(1); 
+        }
+
+        body {
+            background-color: var(--site-bg);
+            color: var(--site-text);
+            transition: background-color 0.3s ease, color 0.3s ease;
+            margin: 0;
+        }
+
+        /* --- 2. NAVBAR STYLING --- */
+        .glass-navbar {
+            background: var(--nav-glass-bg) !important;
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--nav-border);
+            box-shadow: var(--nav-shadow);
+            padding: 0.8rem 1rem !important;
+            transition: all 0.3s ease;
+            position: sticky;
+            top: 0;
+            z-index: 1030;
+        }
+
+        .glass-navbar .nav-link {
+            font-family: 'Poppins', sans-serif;
+            color: var(--nav-text) !important;
+            font-weight: 500;
+            font-size: 0.9rem;
+            padding: 8px 16px !important;
+            border-radius: 8px;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* ICON STYLING */
+        .glass-navbar .nav-link img {
+            transition: transform 0.2s ease, filter 0.3s ease;
+            filter: var(--icon-filter);
+        }
+
+        /* HOVER EFFECTS */
+        .glass-navbar .nav-link:hover {
+            background-color: var(--nav-hover-bg) !important;
+            color: var(--nav-accent) !important;
+        }
+        
+        .glass-navbar .nav-link:hover img {
+            transform: scale(1.2) rotate(-5deg);
+            filter: var(--icon-filter-hover);
+        }
+
+        /* Active State */
+        .glass-navbar .nav-item.active .nav-link {
+            color: var(--nav-accent) !important;
+            font-weight: 600;
+        }
+        
+        .glass-navbar .nav-item.active .nav-link img {
+            filter: var(--icon-filter-hover);
+        }
+
+        /* Underline Animation */
+        .glass-navbar .nav-item { position: relative; }
+        .glass-navbar .nav-item::after {
+            content: '';
+            position: absolute;
+            bottom: 2px;
+            left: 50%;
+            width: 0%;
+            height: 3px;
+            background: var(--nav-accent);
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+            border-radius: 2px;
+        }
+        .glass-navbar .nav-item.active::after { width: 70%; }
+
+        /* --- 3. THEME BUTTON --- */
+        #theme-toggle {
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            font-size: 1.6rem;
+            padding: 5px;
+            line-height: 1;
+            color: var(--nav-text);
+            transition: transform 0.3s;
+        }
+        #theme-toggle:hover { transform: rotate(45deg) scale(1.1); }
+        #theme-toggle:focus { outline: none; }
+
+        /* --- 4. CUSTOM HAMBURGER BUTTON (RENAMED CLASSES) --- */
+        .custom-menu-btn {
+            border: none;
+            background: transparent;
+            cursor: pointer;
+            padding: 10px;
+            width: 45px;
+            height: 45px;
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+            position: relative;
+            z-index: 1031;
+        }
+        
+        /* Show hamburger only on mobile */
+        @media (max-width: 991px) {
+            .custom-menu-btn {
+                display: flex;
+            }
+        }
+        
+        .custom-menu-btn:focus {
+            outline: none;
+            box-shadow: none;
+        }
+        
+        .menu-line {
+            display: block;
+            width: 26px;
+            height: 3px;
+            background-color: var(--nav-text);
+            transition: all 0.3s ease-in-out;
+            border-radius: 2px;
+        }
+
+        /* X transformation when open */
+        .custom-menu-btn.menu-open .menu-line:nth-child(1) {
+            transform: translateY(8px) rotate(45deg);
+            background-color: var(--nav-accent);
+        }
+
+        .custom-menu-btn.menu-open .menu-line:nth-child(2) { 
+            opacity: 0; 
+            transform: translateX(20px);
+        }
+
+        .custom-menu-btn.menu-open .menu-line:nth-child(3) {
+            transform: translateY(-8px) rotate(-45deg);
+            background-color: var(--nav-accent);
+        }
+
+        @media (max-width: 991px) {
+            .glass-navbar .navbar-collapse {
+                background: var(--site-bg);
+                padding: 15px;
+                border-radius: 12px;
+                margin-top: 15px;
+                border: 1px solid var(--nav-border);
+                box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            }
+            .glass-navbar .nav-item::after { display: none; }
+            .glass-navbar .nav-item.active .nav-link {
+                border-left: 4px solid var(--nav-accent);
+                background-color: var(--nav-hover-bg) !important;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg glass-navbar">
+    <div class="container-fluid">
+        
+        <div class="navbar-brand">
+            <button id="theme-toggle" aria-label="Switch Theme">
+                <span id="theme-icon">🌞</span>
+            </button>
+        </div>
+
+        <button class="custom-menu-btn" type="button" id="menuToggle" aria-label="Toggle navigation" aria-controls="mainNav" aria-expanded="false">
+            <span class="menu-line"></span>
+            <span class="menu-line"></span>
+            <span class="menu-line"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-end" id="mainNav">
+            <ul class="navbar-nav">
+                
+                    <li class="nav-item">
+                        <a href="/" class="nav-link">
+                            
+                            
+                                <img src="/img/icons/home.svg" alt="icon" height="20px" width="20px">
+                            
+                            
+                            <span>Home</span>
+                        </a>
+                    </li>
+                
+                    <li class="nav-item">
+                        <a href="/publications.html" class="nav-link">
+                            
+                            
+                                <img src="/img/icons/publications.png" alt="icon" height="20px" width="20px">
+                            
+                            
+                            <span>Publications</span>
+                        </a>
+                    </li>
+                
+                    <li class="nav-item">
+                        <a href="/blog.html" class="nav-link">
+                            
+                            
+                                <img src="/img/icons/blog.svg" alt="icon" height="20px" width="20px">
+                            
+                            
+                            <span>Blog</span>
+                        </a>
+                    </li>
+                
+                    <li class="nav-item">
+                        <a href="/projects.html" class="nav-link">
+                            
+                            
+                                <img src="/img/icons/projects.jpg" alt="icon" height="20px" width="20px">
+                            
+                            
+                            <span>Projects</span>
+                        </a>
+                    </li>
+                
+                    <li class="nav-item">
+                        <a href="/random.html" class="nav-link">
+                            
+                            
+                                <img src="/img/icons/certificates.png" alt="icon" height="20px" width="20px">
+                            
+                            
+                            <span>Random</span>
+                        </a>
+                    </li>
+                
+                    <li class="nav-item">
+                        <a href="/search/" class="nav-link">
+                            
+                            
+                                <img src="/img/icons/search.png" alt="icon" height="20px" width="20px">
+                            
+                            
+                            <span>Search</span>
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+    const toggleButton = document.getElementById('theme-toggle');
+    const themeIcon = document.getElementById('theme-icon');
+    const body = document.body;
+
+    // Theme Logic
+    const currentTheme = localStorage.getItem('theme');
+    if (currentTheme) {
+        body.setAttribute('data-theme', currentTheme);
+        themeIcon.textContent = currentTheme === 'dark' ? '🌜' : '🌞';
+    } else {
+        body.setAttribute('data-theme', 'light');
+    }
+
+    toggleButton.addEventListener('click', () => {
+        const currentTheme = body.getAttribute('data-theme');
+        const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+        body.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
+        themeIcon.textContent = newTheme === 'dark' ? '🌜' : '🌞';
+    });
+
+    // Mobile menu toggle (works without Bootstrap collapse plugin)
+    const menuBtn = document.getElementById('menuToggle');
+    const navCollapse = document.getElementById('mainNav');
+
+    function setMenuState(isOpen) {
+        menuBtn.classList.toggle('menu-open', isOpen);
+        navCollapse.classList.toggle('show', isOpen);
+        menuBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    }
+
+    menuBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        setMenuState(!navCollapse.classList.contains('show'));
+    });
+
+    document.addEventListener('click', function(e) {
+        if (window.innerWidth <= 991 && !menuBtn.contains(e.target) && !navCollapse.contains(e.target)) {
+            setMenuState(false);
+        }
+    });
+
+    window.addEventListener('resize', function() {
+        if (window.innerWidth > 991) {
+            setMenuState(false);
+        }
+    });
+
+    // Active Link Logic
+    $(function() {
+        var url = window.location.href;
+        $(".glass-navbar a.nav-link").each(function() {
+            if (url == (this.href)) {
+                $(this).closest(".nav-item").addClass("active");
+            }
+        });
+    });
+</script>
+
+</body>
+</html>
+
+  
+    <br><br>
+    <br>
+    
+    <html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Morocco Trip, MICCAI 2024</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 0;
+            background: linear-gradient(135deg, #6c5ce7 0%, #a8c0ff 100%);
+            border-radius: 15px;
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            color: white;
+            margin: 0;
+        }
+
+        .navigable-image {
+            position: relative;
+            transition: all 0.3s ease;
+            margin: 30px 0;
+        }
+
+        .navigable-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            display: block;
+        }
+
+        .navigable-image.focused::before {
+            content: '';
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            right: -5px;
+            bottom: -5px;
+            border-radius: 12px;
+            border: 3px solid #6c5ce7;
+            animation: borderPulse 2s infinite;
+            pointer-events: none;
+        }
+
+        @keyframes borderPulse {
+            0% { box-shadow: 0 0 0 0 rgba(108, 92, 231, 0.4); }
+            70% { box-shadow: 0 0 0 10px rgba(108, 92, 231, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(108, 92, 231, 0); }
+        }
+
+        .image-caption {
+            background: rgba(0,0,0,0.7);
+            color: white;
+            padding: 10px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            border-bottom-left-radius: 8px;
+            border-bottom-right-radius: 8px;
+        }
+
+        .image-text-layout {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+            margin: 40px 0;
+        }
+
+        .image-text-layout .navigable-image {
+            width: 50%;
+            margin: 0;
+        }
+
+        .image-text-layout.text-left {
+            flex-direction: row-reverse;
+        }
+
+        .image-text-layout .text {
+            flex: 1;
+            font-size: 1.1em;
+        }
+
+        .help-box {
+            position: fixed;
+            top: 150px;
+            right: 20px;
+            background: linear-gradient(135deg, #6c5ce7 0%, #a8c0ff 100%);
+            padding: 10px;
+            border-radius: 8px;
+            color: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            z-index: 100;
+            font-size: 0.9em;
+            max-width: 200px;
+        }
+
+        .help-box h4 {
+            margin: 0 0 8px 0;
+            font-size: 1em;
+        }
+
+        .help-box ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .help-box li {
+            margin: 3px 0;
+            font-size: 0.85em;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.9);
+            z-index: 2000;
+        }
+
+        .modal-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 90%;
+            max-width: 80vw;
+            max-height: 90vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .modal img {
+            max-width: 100%;
+            max-height: 80vh;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            border-radius: 8px;
+        }
+
+        .modal-description {
+            color: white;
+            margin-top: 20px;
+            font-size: 1.5em;
+            text-align: center;
+            background: rgba(255, 255, 255, 0);
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            color: white;
+            font-size: 40px;
+            cursor: pointer;
+            z-index: 3000;
+        }
+
+        /* Placeholder for lazy loaded images */
+        .placeholder {
+            background-color: #f1f1f1;
+            width: 100%;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+        }
+
+        .placeholder::after {
+            content: 'Loading...';
+            color: #666;
+            font-size: 1.2em;
+        }
+
+        @media (max-width: 768px) {
+            .image-text-layout {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .image-text-layout.text-left {
+                flex-direction: column;
+            }
+
+            .image-text-layout .navigable-image {
+                width: 100%;
+            }
+
+            .help-box {
+                top: 10px;
+                right: 10px;
+                padding: 8px;
+                font-size: 0.8em;
+                max-width: 150px;
+            }
+
+            body {
+                padding: 10px;
+            }
+
+            header {
+                padding: 20px 0;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            .modal img {
+                max-height: 70vh;
+            }
+
+            .modal-description {
+                font-size: 1.2em;
+            }
+
+            .close-modal {
+                font-size: 30px;
+                top: 5px;
+                right: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="help-box">
+        <h4>Navigation Guide</h4>
+        <ul>
+            <li>↑ Up Arrow: Previous image</li>
+            <li>↓ Down Arrow: Next image</li>
+            <li>Click image to enlarge</li>
+        </ul>
+    </div>
+
+    <header>
+        <h1>Morocco and Qatar Trip - Oct, 2024</h1>
+    </header>
+
+
+
+    <div class="text" style="text-align: justify; font-size: 1.1em;">
+    <p>
+    The <strong>International Conference on Medical Image Computing and Computer-Assisted Intervention (MICCAI)</strong> 2024 was held in the beautiful and culturally rich city of Marrakesh, Morocco, from October 6th to 10th. I had the privilege of attending the conference to present my poster titled 
+    <em>“Convex Segments for Convex Objects Using DNN Boundary Tracing and Graduated Optimization”</em> 
+    (<a href="https://papers.miccai.org/miccai-2024/paper/0850_paper.pdf" target="_blank">PDF here</a>). 
+    As this was not only my first MICCAI but also my very first international trip, the experience was both exciting and slightly nerve-wracking. 
+    The choice of Morocco as a conference venue—unconventional yet fascinating—added an extra layer of adventure and anticipation to the journey.
+    </p>
+
+    </div>
+
+   <!-- (1) Image on right, text on left -->
+    <div class="image-text-layout text-left">
+        <div class="navigable-image" data-description="Journey to Morocco for MICCAI 2024">
+            <div class="placeholder"></div>
+            <noscript><img src="../img/morocco_qatar_miccai_2024/1_to_morocco.jpg" alt="Travel to Morocco" /></noscript>
+            <div class="image-caption">Casablanca to Marrakesh</div>
+        </div>
+        <div class="text">
+            <h3>Journey Begins</h3>
+            <br />
+            <p>
+            I traveled along with a group of five friends from India, and we met at Doha Airport before boarding our shared flight to Marrakesh via Casablanca. 
+            It was during this journey that I first noticed a significant number of tourists from various Asian countries—though surprisingly, very few from India. 
+            After landing in Marrakesh, we took a bus followed by a taxi to reach our accommodation at the <strong>Ibis Palmeraie Hotel</strong>.
+            </p>
+        </div>
+    </div>
+
+    <!-- (2) No change needed -->
+    <div class="image-text-layout">
+        <div class="navigable-image" data-description="Merana Airport arrival">
+            <div class="placeholder"></div>
+            <noscript><img src="../img/morocco_qatar_miccai_2024/2_merana_airport.jpg" alt="Merana Airport" /></noscript>
+            <div class="image-caption">Arrival at Merana Airport</div>
+        </div>
+        <div class="text">
+            <h3>Merana Airport</h3>
+            <br />
+            <p>The journey to MICCAI 2024 began with arrival at Merana Airport. The modern architecture of the terminal welcomes international researchers and academics to Morocco for this prestigious medical imaging conference.</p>
+        </div>
+    </div>
+
+    <!-- (3) No change needed -->
+    <div class="image-text-layout text-left">
+        <div class="navigable-image" data-description="Another view of Merana Airport">
+            <div class="placeholder"></div>
+            <noscript><img src="../img/morocco_qatar_miccai_2024/2_merana_airport_2.jpg" alt="Merana Airport Terminal" /></noscript>
+            <div class="image-caption">Merana Airport Terminal</div>
+        </div>
+        <div class="text">
+            <h3>Arrived... but tired!</h3>
+            <br />
+            <p>
+              We finally arrived at <strong>Marrakesh Airport</strong>, completely exhausted after nearly 18 hours of travel, including a 4–5 hour layover at Doha Airport.
+            </p>
+        </div>
+    </div>
+
+    <!-- (4) Image on right, text on left -->
+    <div class="image-text-layout text-left">
+        <div class="navigable-image" data-description="Palmarie Conference Center">
+            <div class="placeholder"></div>
+            <noscript><img src="../img/morocco_qatar_miccai_2024/3_palmarie_conference_center.jpg" alt="Palmarie Conference Center" /></noscript>
+            <div class="image-caption">Palmarie Conference Center - MICCAI 2024 Venue</div>
+        </div>
+        <div class="text">
+            <h3>Conference Venue</h3>
+            <br />
+            <p>
+            The conference was held at the <strong>Palmeraie Conference Centre</strong>, a spacious and beautifully designed venue that resembled a resort. 
+            We posed for photos at the entrance, alongside the conference banners and sponsor displays, capturing the excitement of the moment. 
+            The ambiance was vibrant, the facilities were well-maintained, and the food throughout the event was truly excellent. 
+            With palm trees lining the area and a calm, resort-like atmosphere, it was the perfect setting for both academic exchange and informal networking.
+            </p>
+
+        </div>
+    </div>
+
+    <!-- (5) No change needed -->
+    <div class="image-text-layout">
+        <div class="navigable-image" data-description="Conference catering and food arrangements">
+            <div class="placeholder"></div>
+            <noscript><img src="../img/morocco_qatar_miccai_2024/4_conference_food.jpg" alt="Conference Catering" /></noscript>
+            <div class="image-caption">Culinary arrangements at the conference</div>
+        </div>
+        <div class="text">
+            <h3>Conference Hospitality</h3>
+            <br />
+           <p>
+            The food at the conference venue was absolutely delightful. This year saw a record-breaking attendance of around 2,500 participants from across the globe, and the organizers did a commendable job in maintaining the overall experience. 
+            We had the chance to savor a wide variety of dishes, including the famous shawarma, cooked tuna, turkey meat, and an array of French-Moroccan cuisine featuring freshly baked breads and local flavors. 
+            It was my first time trying tuna and experiencing the traditional “dry” version of shawarma. 
+            Compared to the creamier variant commonly found in India, this version had a more rustic and authentic taste, though I must admit, I still prefer the Indian style!
+            </p>
+
+        </div>
+    </div>
+
+
+    
+    <br />
+    <div class="text" style="text-align: justify; font-size: 1.1em;">
+    <h3>Poster Presentation</h3>
+    <br />
+    <p>
+    This was my first time presenting a poster, and it turned out to be a thoroughly engaging experience. 
+    Personally, I find poster presentations more rewarding than oral talks, as they allow for one-on-one interactions and deeper conversations with fellow researchers. 
+    Beyond simply showcasing my work, I had the chance to connect with my advisor’s colleagues and engage with experts who offered valuable insights and potential extensions to my research. 
+    Some even recognized the group I was working with, which made the discussions more fluid and constructive. 
+    I spoke to so many people throughout the session that by the end, I had an actual sore throat—but it was absolutely worth it.
+    </p>
+    </div>
+
+    <!-- (6) No change needed -->
+    <div class="navigable-image" data-description="Poster presentation session at MICCAI 2024">
+        <div class="placeholder"></div>
+        <noscript><img src="../img/morocco_qatar_miccai_2024/5_poster_presentation.jpg" alt="Poster Presentation" /></noscript>
+        <div class="image-caption">My poster session at MICCAI 2024</div>
+    </div>
+
+    <!-- (7) No change needed -->
+    <div class="image-text-layout text-left">
+        <div class="navigable-image" data-description="Random Walks session at the conference">
+            <div class="placeholder"></div>
+            <noscript><img src="../img/morocco_qatar_miccai_2024/6_random_walks.jpg" alt="Random Walks Session" /></noscript>
+            <div class="image-caption">Exploring the Conference Venue</div>
+        </div>
+        <div class="text">
+            <h3>Technical Presentations</h3>
+            <br />
+            <p>
+            We took some time to explore the conference center, and it was impressively large, featuring resort-style rooms and expansive open spaces. 
+            The surroundings were dotted with tall date palm trees, giving the venue a serene and tropical feel. 
+            Beyond the lush greenery, stretches of desert landscape added a unique charm, reminding us that we were in the heart of North Africa. 
+            The blend of natural beauty and modern infrastructure made the setting truly memorable.
+            </p>
+
+        </div>
+    </div>
+
+    <!-- (8) Image on right, text on left -->
+    <div class="image-text-layout text-left">
+        <div class="navigable-image" data-description="Saurabh, the chill guy!">
+            <div class="placeholder"></div>
+            <noscript><img src="../img/morocco_qatar_miccai_2024/7_meetup_1.jpg" alt="With my hotel neighbor, Saurabh" /></noscript>
+            <div class="image-caption">With my hotel neighbor, Saurabh, at the cultural meetup</div>
+        </div>
+        <div class="text">
+            <h3>With Saurabh</h3>
+            <br />
+           <p>
+            With my hotel neighbor, Saurabh, by my side, the conference experience became much smoother and more enjoyable. 
+            Whether it was walking to the conference center or planning the next places to explore, he was always ready to lend a hand. 
+            I honestly don’t know how I would have managed my first international conference without him. 
+            I still vividly remember the first day when we accidentally ended up at a completely different Ibis hotel and had to take a taxi to reach the correct one — a classic mix-up! 
+            Through it all, Saurabh remained calm and collected, truly a total chill guy.
+            </p>
+
+        </div>
+    </div>
+
+    <!-- (9) No change needed -->
+    <div class="image-text-layout">
+        <div class="navigable-image" data-description="Group discussion during meetup">
+            <div class="placeholder"></div>
+            <noscript><img src="../img/morocco_qatar_miccai_2024/7_meetup_2.jpg" alt="Group Discussion" /></noscript>
+            <div class="image-caption">Collaborative discussions among conference attendees</div>
+        </div>
+        <div class="text">
+            <h3>Cultural Events</h3>
+            <br />
+            <p>
+            In the evenings, MICCAI typically hosts cultural events, and this year was no exception. 
+            It was a great opportunity to network with researchers from different parts of the world, beyond our familiar Indian group. 
+            The venue buzzed with local performances, traditional music, and cultural showcases that added flavor to the academic atmosphere. 
+            Over some Coke and snacks, we chatted about our experiences and started planning the places we wanted to explore in and around Marrakesh once our poster sessions were done.
+            </p>
+
+        </div>
+    </div>
+
+    <!-- (10) Center image -->
+    <div class="center-image">
+        <div class="navigable-image" data-description="Traditional Moroccan dance performance">
+            <div class="placeholder"></div>
+            <noscript><img src="../img/morocco_qatar_miccai_2024/7_meetup_3.jpg" alt="Cultural Dance and Music Performances" /></noscript>
+            <div class="image-caption">Cultural Dance and Music Performances</div>
+        </div>
+    </div>
+
+    <!-- (11) Image on right, text on left -->
+    <div class="image-text-layout text-left">
+        <div class="navigable-image" data-description="The famous souks of Morocco">
+            <div class="placeholder"></div>
+            <noscript><img src="../img/morocco_qatar_miccai_2024/7_souks_morocco.jpg" alt="Moroccan Souks" /></noscript>
+            <div class="image-caption">Exploring the vibrant souks of Morocco</div>
+        </div>
+        <div class="text">
+            <h3>Moroccan Markets a.k.a. "Souks"</h3>
+            <br />
+            <p>
+            One of the most fascinating aspects of Morocco was exploring the <strong>Souks</strong>, the vibrant local markets filled with handcrafted goods. 
+            These markets reminded me of the famous <em>Chandni Chowk</em> in Kolkata, though much cleaner and noticeably pricier, catering mainly to European tourists. 
+            A unique feature of the souks is the art of bargaining — as visitors, we were often quoted inflated prices, while locals knew the real value and didn’t need to haggle. 
+            To make transactions more economical, it’s highly recommended to carry Moroccan Dirhams rather than Euros or Dollars. 
+            We had wisely exchanged a good amount of Dirhams at the airport beforehand, which made shopping much smoother.
+            </p>
+
+        </div>
+    </div>
+
+    <!-- (12) Image on right, text on left -->
+    <div class="image-text-layout text-left">
+        <div class="navigable-image" data-description="Back to the hotel after exploring the souks">
+            <div class="placeholder"></div>
+            <noscript><img src="../img/morocco_qatar_miccai_2024/8_travel_to_souks.jpg" alt="Traveling back to the hotels" /></noscript>
+            <div class="image-caption">En route to respective hotels</div>
+        </div>
+        <div class="text">
+            <h3>Back to hotels</h3>
+            <br />
+            <p>
+            Our group grew more vibrant as we joined with about six Indians from prestigious institutions like ISI Kolkata, IIT Patna, IIT Jodhpur, and more. 
+            After exploring the souks, we visited several other places together, turning the trip into much more of an exciting excursion than just a conference visit. 
+            Sharing similar experiences and cultural values helped us bond quickly and blend in seamlessly, making the journey even more memorable and enjoyable.
+            </p>
+
+        </div>
+    </div>
+
+
+    <!-- (13) No change needed -->
+    <div class="image-text-layout text-left">
+        <div class="navigable-image" data-description="Travel to the Water Museum">
+            <div class="placeholder"></div>
+            <noscript><img src="../img/morocco_qatar_miccai_2024/9_travel_to_museum.jpg" alt="Travel to Water Museum" /></noscript>
+            <div class="image-caption">Journey to the Water Museum</div>
+        </div>
+        <div class="text">
+            <h3>Travel to the Water Museum and the "Desert"</h3>
+            <br />
+            <p>
+            We did a lot of walking during the trip. One day, since most poster presentations and workshops were handled by others and we still had a day left at the conference, we decided to leave early and visit the fantastic Water Museum. 
+            Although we couldn’t find a cab, we chose to walk there instead. While it wasn’t the best idea given the distance, the journey turned out to be totally worth it as we experienced local culture firsthand and even saw camels and stretches of desert along the way.
+            </p>
+
+        </div>
+    </div>
+
+    <!-- (14) Image on left, text on right -->
+    <div class="image-text-layout">
+        <div class="navigable-image" data-description="Water Museum in Morocco">
+            <div class="placeholder"></div>
+            <noscript><img src="../img/morocco_qatar_miccai_2024/9_water_museum.jpg" alt="Water Museum" /></noscript>
+            <div class="image-caption">Morocco's fascinating Water Museum</div>
+        </div>
+        <div class="text">
+            <h3>Water Conservation Heritage</h3>
+            <br />
+           <p>
+            Living in a water-surplus region, we often take water conservation for granted. However, after visiting the desert in Morocco, I realized how precious this resource truly is. 
+            It never struck me until I had to pay nearly ten times more for a bottle of water there compared to prices in West Bengal or Mumbai. 
+            Morocco has a long-standing tradition of water preservation, and visiting the Water Museum—a cultural heritage site—was an eye-opening and worthwhile experience that deepened my appreciation for sustainable water management.
+            </p>
+
+        </div>
+    </div>
+
+    <!-- (15) Center image -->
+    <div class="center-image">
+        <div class="navigable-image" data-description="The iconic Kutubiyya Mosque">
+            <div class="placeholder"></div>
+            <noscript><img src="../img/morocco_qatar_miccai_2024/10_kutubiyya.jpg" alt="Kutubiyya Mosque" /></noscript>
+            <div class="image-caption">The majestic Kutubiyya Mosque</div>
+        </div>
+    </div>
+
+    <!-- (16) No change needed -->
+    <div class="image-text-layout text-left">
+        <div class="navigable-image" data-description="Another angle of Kutubiyya Mosque">
+            <div class="placeholder"></div>
+            <noscript><img src="../img/morocco_qatar_miccai_2024/10_kutubiyya_2.jpg" alt="Kutubiyya Mosque Angle" /></noscript>
+            <div class="image-caption">Kutubiyya Mosque from another perspective</div>
+        </div>
+        <div class="text">
+            <h3>Historical Significance</h3>
+            <br />
+           <p>
+            The <strong>Qutubia Mosque</strong> is one of Morocco’s most iconic landmarks, located close to the bustling souks. 
+            On one memorable day, we explored the souks and the surrounding neighborhood of Qutubia, walking nearly 14 kilometers. 
+            Walking proved to be the best way to soak in the local culture and atmosphere, far better than taking a taxi. 
+            Morocco surprised us with its cleanliness, and the people we met were exceptionally friendly and helpful throughout our journey.
+            </p>
+
+        </div>
+    </div>
+
+    <!-- (17) Image on right, text on left -->
+    <div class="image-text-layout text-left">
+        <div class="navigable-image" data-description="Area near the Kutubiyya Mosque with Purple Sky">
+            <div class="placeholder"></div>
+            <noscript><img src="../img/morocco_qatar_miccai_2024/10_near_kutubyya.jpg" alt="Near Kutubiyya" /></noscript>
+            <div class="image-caption">The area surrounding Kutubiyya Mosque with Purple Sky</div>
+        </div>
+        <div class="text">
+            <h3>Mosque Surroundings</h3>
+            <br />
+            <p>The areas surrounding the Kutubiyya Mosque blend historical architecture with modern urban life, creating a unique atmosphere where visitors can experience the cultural significance of this iconic landmark.</p>
+        </div>
+    </div>
+
+    <!-- (18) Center image -->
+    <div class="center-image">
+        <div class="navigable-image" data-description="Kutubiya Road">
+            <div class="placeholder"></div>
+            <noscript><img src="../img/morocco_qatar_miccai_2024/10_kutubiya_road.jpg" alt="Kutubiya Road" /></noscript>
+            <div class="image-caption">The bustling Kutubiya Road</div>
+        </div>
+    </div>
+
+    <!-- (19) Image on left, text on right -->
+    <div class="image-text-layout">
+        <div class="navigable-image" data-description="Another view of Kutubya Road">
+            <div class="placeholder"></div>
+            <noscript><img src="../img/morocco_qatar_miccai_2024/11_kutubya_road.jpg" alt="Another view of Kutubya Road" /></noscript>
+            <div class="image-caption">Exploring the vibrant Kutubya Road</div>
+        </div>
+        <div class="text">
+            <h3>Urban Exploration</h3>
+            <br />
+            <p>Kutubya Road offers a glimpse into everyday Moroccan life, with a blend of traditional architecture, local businesses, and cultural elements that create a distinctly Moroccan urban experience for international visitors.</p>
+        </div>
+    </div>
+
+
+    
+     <!-- (22) No change needed -->
+    <div class="image-text-layout text-left">
+        <div class="navigable-image" data-description="Chaiz Ali at the gala">
+            <div class="placeholder"></div>
+            <noscript><img src="../img/morocco_qatar_miccai_2024/12_gala_chaiz_ali.jpg" alt="Chaiz Ali at Gala" /></noscript>
+            <div class="image-caption">Chaiz Ali enjoying the gala festivities</div>
+        </div>
+        <div class="text">
+            <h3>Gala Dinner at the "Chaiz Ali"</h3>
+            <br />
+            <p>
+            The final gala dinner was held at the renowned <strong>Chez Ali</strong> restaurant, celebrated for its traditional Arab warriors’ show complete with dazzling firecracker displays. 
+            We had the chance to witness the performance firsthand and indulge in authentic Moroccan cuisine. 
+            This immersive experience truly encapsulated the essence of Moroccan culture, making our journey all the more unforgettable.
+            </p>
+        </div>
+    </div>
+
+    <!-- (20) Image on right, text on left -->
+    <div class="image-text-layout text-left">
+        <div class="navigable-image" data-description="MICCAI 2024 Gala Event">
+            <div class="placeholder"></div>
+            <noscript><img src="../img/morocco_qatar_miccai_2024/12_gala.jpg" alt="MICCAI Gala" /></noscript>
+            <div class="image-caption">The elegant MICCAI 2024 Gala Event</div>
+        </div>
+        <div class="text">
+            <h3>Gala Dinner Celebrations and final Conference Day</h3>
+            <br />
+            <p>
+            On the final day, we attended the grand <strong>Gala Dinner</strong>, which featured spectacular performances and a vibrant cultural gathering. 
+            It was a wonderful opportunity to meet and connect with many researchers from my field, fostering valuable academic and professional relationships. 
+            The cultural program was truly enjoyable, with talented local performers lighting up the evening. 
+            </p>
+
+        </div>
+    </div>
+
+   
+
+
+    <!-- (23) Image on left, text on right -->
+    <div class="image-text-layout">
+        <div class="navigable-image" data-description="Another photo of Chaiz Ali at the gala">
+            <div class="placeholder"></div>
+            <noscript><img src="../img/morocco_qatar_miccai_2024/12_gala_chaiz_ali_2.jpg" alt="Chaiz Ali Gala" /></noscript>
+            <div class="image-caption">Chaiz Ali networking at the gala event</div>
+        </div>
+        <div class="text">
+            <h3>Indians Assemble</h3>
+            <br />
+            <p> Our extended group of NRI friends also gathered at the dinner, where we relished dishes like succulent lamb meat and the famous <em>khus-khus</em>, rounding off the trip on a delightful note.</p>
+        </div>
+    </div>
+
+   
+
+
+     <!-- (21) Center image -->
+    <div class="center-image">
+        <div class="navigable-image" data-description="Indian researchers at the gala">
+            <div class="placeholder"></div>
+            <noscript><img src="../img/morocco_qatar_miccai_2024/12_gala_all_indians.jpg" alt="Indian Researchers at Gala" /></noscript>
+            <div class="image-caption">Indian delegation at the conference gala</div>
+        </div>
+    </div>
+
+    <br /><br />
+
+    
+    <br />
+    <div class="text" style="text-align: justify; font-size: 1.1em;">
+    <h3>Journey to Qatar</h3>
+    <br />
+    <p>
+    During my 8-hour layover at <strong>Doha Airport</strong>, I was initially hesitant about stepping out to explore Qatar, worried I might miss my connecting flight. 
+    However, after speaking with the airport staff, I learned about a 3-hour guided tour that could be done comfortably within my layover window. 
+    I opted for the value tour package, which took us around in a fully air-conditioned bus with free Wi-Fi. 
+    The tour was packed with memorable sights — we saw camels, visited stadiums, explored historic and traditional architecture, admired the stunning skyline, and even browsed through local souks. 
+    To top it all off, we tried a delicious traditional sandwich, making it an unexpectedly joyful and enriching detour on my way back home.
+    </p>
+
+    </div>
+    
+    <br />
+
+    
+
+    <!-- (24) Image on right, text on left -->
+    <div class="image-text-layout text-left">
+        <div class="navigable-image" data-description="Art Museum, Qatar">
+            <div class="placeholder"></div>
+            <noscript><img src="../img/morocco_qatar_miccai_2024/13_quatar_1.jpg" alt="Qatar Visit" /></noscript>
+            <div class="image-caption">Art Museum, Qatar</div>
+        </div>
+        <div class="text">
+            <h3>Art Museum</h3>
+            <br />
+            <p>
+            Our first stop on the tour was the <strong>Museum of Islamic Art</strong>, a place where we witnessed a variety of traditional artworks and cultural treasures. 
+            This iconic building, located on the Doha Corniche, was designed by the renowned architect <strong>I. M. Pei</strong>. 
+            Standing before this architectural marvel, we enjoyed breathtaking panoramic views of Doha’s stunning skyline — a perfect blend of heritage and modernity to begin our exploration of Qatar.
+            </p>
+
+        </div>
+    </div>
+
+    <!-- (25) No change needed -->
+    <div class="image-text-layout">
+        <div class="navigable-image" data-description="Qatar's modern architecture">
+            <div class="placeholder"></div>
+            <noscript><img src="../img/morocco_qatar_miccai_2024/13_quatar_2.jpg" alt="Qatar Architecture" /></noscript>
+            <div class="image-caption">Qatar's impressive modern architecture</div>
+        </div>
+        <div class="text">
+            <h3>Modern Marvels</h3>
+            <br />
+            <p>After the conference in Morocco, some participants extended their journey to Qatar. The country's stunning modern architecture showcases its rapid development and vision for the future, creating a striking contrast to Morocco's historical landmarks.</p>
+        </div>
+    </div>
+
+    <!-- (26) No change needed -->
+    <div class="image-text-layout text-left">
+        <div class="navigable-image" data-description="Camel sighting in Qatar">
+            <div class="placeholder"></div>
+            <noscript><img src="../img/morocco_qatar_miccai_2024/13_quatar_3_camels.jpg" alt="Qatar Camels" /></noscript>
+            <div class="image-caption">Encountering camels in Qatar</div>
+        </div>
+        <div class="text">
+            <h3>Cultural Heritage</h3>
+            <br />
+            <p>Despite its modernization, Qatar maintains strong connections to its cultural heritage. Traditional elements like camel riding remain important cultural symbols that provide visitors with authentic experiences of Qatari history.</p>
+        </div>
+    </div>
+
+    <!-- (27) No change needed -->
+    <div class="navigable-image" data-description="Qatar's Skyline">
+        <div class="placeholder"></div>
+        <noscript><img src="../img/morocco_qatar_miccai_2024/13_quatar_4.jpg" alt="Qatar Landscape" /></noscript>
+        <div class="image-caption">Qatar's Skyline</div>
+    </div>
+
+    <!-- (28) No change needed -->
+    <div class="image-text-layout">
+        <div class="navigable-image" data-description="Another view of Qatar">
+            <div class="placeholder"></div>
+            <noscript><img src="../img/morocco_qatar_miccai_2024/13_quatar_5.jpg" alt="Qatar View" /></noscript>
+            <div class="image-caption">Exploring Qatar's diverse settings</div>
+        </div>
+        <div class="text">
+            <h3>Expanding Horizons</h3>
+            <br />
+            <p>
+            We then proceeded to the <strong>Katara Cultural Village</strong>, the largest and most diverse cultural project in Qatar. 
+            This vibrant hub offers a unique opportunity to experience global cultures through its stunning theatres, concert halls, exhibition galleries, and state-of-the-art facilities. 
+            Highlights of our visit included the magnificent <strong>Katara Mosque</strong> (also known as the ‘Blue Mosque’) and the <strong>Golden Masjid</strong> (the ‘Gold Mosque’), each a masterpiece of Islamic architecture. 
+            Afterward, we strolled through the outdoor air-conditioned walkways to <strong>Galeries Lafayette</strong>, where we had some time to browse luxury brands and enjoy tax-free shopping.
+            </p>
+
+        </div>
+    </div>
+
+    <!-- (29) Image on left, text on right -->
+    <div class="image-text-layout">
+        <div class="navigable-image" data-description="The souks of Qatar">
+            <div class="placeholder"></div>
+            <noscript><img src="../img/morocco_qatar_miccai_2024/13_quatar_souks.jpg" alt="Qatar Souks" /></noscript>
+            <div class="image-caption">The traditional souks of Qatar</div>
+        </div>
+        <div class="text">
+            <h3>Qatari Marketplaces, a.k.a. "Souqs"</h3>
+            <br />
+            <p>
+            We concluded our tour with a delightful stroll through the vibrant <strong>Souq Waqif</strong>, a bustling marketplace that truly captures the living heritage and traditions of Doha. 
+            The souq’s colorful alleyways were filled with a blend of commerce, culture, and culinary experiences. 
+            Among the highlights were the <strong>Falcon Souq</strong> and the renowned <strong>Falcon Hospital</strong>, one of the largest in the Middle East. 
+            We also explored the <strong>Carpet Souq</strong>, <strong>Gold Souq</strong>, and the <strong>Art and Handicraft Souq</strong>, making it a richly immersive experience into Qatar’s traditional and commercial heart.
+            </p>
+
+        </div>
+    </div>
+
+    <div class="text" style="text-align: justify; font-size: 1.1em;">
+    <p>
+    Along the way, what made this entire journey even more special was the company. 
+    In addition to Saurabh, who had been my constant companion from the start, we also became good friends with <strong>Raja</strong>, whose energy and enthusiasm added so much to our explorations. 
+    From navigating new cities to sharing laughs over local cuisine, these friendships turned a professional trip into a truly memorable adventure.
+    </p>
+    </div>
+
+
+    <div class="modal">
+        <span class="close-modal">&times;</span>
+        <div class="modal-content">
+            <img src="" alt="" />
+            <div class="modal-description"></div>
+        </div>
+    </div>
+
+    <script>
+        const navigableImages = document.querySelectorAll('.navigable-image');
+        const modal = document.querySelector('.modal');
+        const modalImg = modal.querySelector('img');
+        const modalDescription = modal.querySelector('.modal-description');
+        const closeModal = modal.querySelector('.close-modal');
+        let currentFocusIndex = -1;
+        let lastClickedImageIndex = -1;
+
+        function focusImage(index) {
+            navigableImages.forEach(container => container.classList.remove('focused'));
+            
+            if (index >= 0 && index < navigableImages.length) {
+                const container = navigableImages[index];
+                container.classList.add('focused');
+                container.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                currentFocusIndex = index;
+            }
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowUp') {
+                e.preventDefault();
+                if (currentFocusIndex <= 0) {
+                    focusImage(navigableImages.length - 1);
+                } else {
+                    focusImage(currentFocusIndex - 1);
+                }
+            } else if (e.key === 'ArrowDown') {
+                e.preventDefault();
+                if (currentFocusIndex >= navigableImages.length - 1) {
+                    focusImage(0);
+                } else {
+                    focusImage(currentFocusIndex + 1);
+                }
+            } else if (e.key === 'Escape') {
+                modal.style.display = 'none';
+                if (lastClickedImageIndex !== -1) {
+                    focusImage(lastClickedImageIndex);
+                }
+            }
+        });
+
+        // Lazy loading implementation
+        const lazyLoadImages = () => {
+            const imageObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const container = entry.target;
+                        const placeholder = container.querySelector('.placeholder');
+                        const noscript = container.querySelector('noscript');
+                        
+                        if (placeholder && noscript) {
+                            // Extract image HTML from noscript
+                            const imgHtml = noscript.textContent || noscript.innerHTML;
+                            const tempDiv = document.createElement('div');
+                            tempDiv.innerHTML = imgHtml;
+                            const img = tempDiv.querySelector('img');
+                            
+                            if (img) {
+                                // Create new image with load event
+                                const newImg = new Image();
+                                newImg.onload = function() {
+                                    // Replace placeholder with loaded image
+                                    placeholder.parentNode.replaceChild(newImg, placeholder);
+                                    observer.unobserve(container);
+                                };
+                                newImg.onerror = function() {
+                                    console.error('Failed to load image:', img.src);
+                                    placeholder.textContent = 'Failed to load image';
+                                };
+                                newImg.src = img.src;
+                                newImg.alt = img.alt;
+                                newImg.className = img.className;
+                                
+                                // Set additional attributes
+                                for (const attr of img.attributes) {
+                                    if (attr.name !== 'src' && attr.name !== 'alt' && attr.name !== 'class') {
+                                        newImg.setAttribute(attr.name, attr.value);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                });
+            }, {
+                rootMargin: '100px 0px',
+                threshold: 0.1
+            });
+
+            // Observe all image containers
+            navigableImages.forEach(container => {
+                imageObserver.observe(container);
+            });
+        };
+
+        // Setup modal and click events
+        navigableImages.forEach((container, index) => {
+            container.addEventListener('click', () => {
+                lastClickedImageIndex = index;
+                modal.style.display = 'block';
+                
+                // Get the loaded image or placeholder
+                const img = container.querySelector('img') || container.querySelector('.placeholder');
+                
+                // If we have a real image, use it
+                if (img && img.tagName === 'IMG') {
+                    modalImg.src = img.src;
+                    modalImg.alt = img.alt;
+                } else {
+                    // If we only have a placeholder, attempt to load the image from noscript
+                    const noscript = container.querySelector('noscript');
+                    if (noscript) {
+                        const tempDiv = document.createElement('div');
+                        tempDiv.innerHTML = noscript.textContent || noscript.innerHTML;
+                        const noscriptImg = tempDiv.querySelector('img');
+                        if (noscriptImg) {
+                            modalImg.src = noscriptImg.src;
+                            modalImg.alt = noscriptImg.alt;
+                        }
+                    }
+                }
+                
+                modalDescription.textContent = container.dataset.description || modalImg.alt;
+            });
+        });
+
+        closeModal.addEventListener('click', () => {
+            modal.style.display = 'none';
+            if (lastClickedImageIndex !== -1) {
+                focusImage(lastClickedImageIndex);
+            }
+        });
+
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+                if (lastClickedImageIndex !== -1) {
+                    focusImage(lastClickedImageIndex);
+                }
+            }
+        });
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            lazyLoadImages();
+            focusImage(0);
+        });
+
+        // Fallback for browsers that don't support IntersectionObserver
+        if (!('IntersectionObserver' in window)) {
+            console.log('IntersectionObserver not supported, using fallback');
+            document.querySelectorAll('.navigable-image').forEach((container) => {
+                const placeholder = container.querySelector('.placeholder');
+                const noscript = container.querySelector('noscript');
+                
+                if (placeholder && noscript) {
+                    const tempDiv = document.createElement('div');
+                    tempDiv.innerHTML = noscript.textContent || noscript.innerHTML;
+                    const img = tempDiv.querySelector('img');
+                    
+                    if (img) {
+                        placeholder.parentNode.replaceChild(img, placeholder);
+                    }
+                }
+            });
+        }
+    </script>
+    
+</body>
+</html>
+
+
+    <br><br>
+
+  
+  
+
+
+  <!-- Footer -->
+  <footer class="footer page-footer font-small pt-1">
+    <div  align="center">
+      
+          <!-- Copyright -->
+          <div class="footer-copyright" style="color: rgb(217, 61, 61);"> 2019-2026
+              <a href="https://github.com/Jimut123" style="color: rgb(217, 61, 61);"> Copyright © Jimut Bahan Pal</a>
+          </div>
+          <!-- Copyright -->
+    </div>
+  </footer>
+  <!-- Footer -->
+
+
+
+  <script>
+    var preloader = document.getElementById('loading');
+    function myFunction() { 
+      preloader.style.display = 'none';
+    }
+  </script>
+</body>
