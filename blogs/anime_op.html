@@ -1,0 +1,1226 @@
+<!doctype html>
+
+<!-- DNS Preconnect for faster external resource loading -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdnjs.cloudflare.com">
+<link rel="preconnect" href="https://mdbootstrap.com">
+
+<link href="https://fonts.googleapis.com/css?family=Cardo&display=swap" rel="stylesheet"> 
+
+<!--
+<link rel="stylesheet" href="/css/compiled-4.8.0.min.css"></link>
+-->
+
+<link rel="shortcut icon" type="image/x-icon" href="../img/thumbnail.jpg">
+
+
+<!-- Bootstrap core CSS -->
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Material Design Bootstrap -->
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.0/css/mdb.min.css" rel="stylesheet">
+
+
+
+<!-- jQuery must be loaded before Bootstrap JavaScript -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+<!-- Bootstrap core JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+<!-- Lazy loading of Gallery and stuffs!-->
+
+<script src="../js/jimjs.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<link rel = "stylesheet" type = "text/css" href = "../css/jimstyle.css" />
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Jimut Bahan Pal" />
+    <meta name="description" content="Personal website of Jimut Bahan Pal - Researcher, Developer, and Machine Learning enthusiast. Explore projects, publications, blogs, and more.">
+    <meta name="keywords" content="Jimut Bahan Pal, machine learning, deep learning, computer vision, IIT Bombay, research, projects, publications">
+    <meta name="google-site-verification" content="2SC5t4-rLXOS1eAW-l2YL_qFLuIJW2vSRZNduyOGKN0" />
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://jimut123.github.io/blogs/anime_op.html">
+    
+    <!-- Open Graph Meta Tags for Social Sharing -->
+    <meta property="og:title" content="Anime">
+    <meta property="og:description" content="Personal website of Jimut Bahan Pal - Researcher, Developer, and Machine Learning enthusiast. Explore projects, publications, blogs, and more.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://jimut123.github.io/blogs/anime_op.html">
+    <meta property="og:image" content="https://jimut123.github.io/img/jimut.jpeg">
+    <meta property="og:site_name" content="Jimut Bahan Pal - Personal Website">
+    <meta property="og:locale" content="en_IN">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Anime">
+    <meta name="twitter:description" content="Personal website of Jimut Bahan Pal - Researcher, Developer, and Machine Learning enthusiast. Explore projects, publications, blogs, and more.">
+    <meta name="twitter:image" content="https://jimut123.github.io/img/jimut.jpeg">
+    <meta name="twitter:creator" content="@jimut_pal">
+    
+    <!-- Additional SEO Meta Tags -->
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow, max-image-preview:large">
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-140291358-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-140291358-1');
+    </script>
+
+    
+    <title> Anime </title>
+  </head>
+
+  <body onload = "myFunction()">
+    <div id="loading"> </div>
+    
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        /* --- 1. THEME VARIABLES --- */
+        :root {
+            --site-bg: #ffffff;
+            --site-text: #333333;
+            
+            /* Light Mode Navbar */
+            --nav-glass-bg: rgba(255, 255, 255, 0.85);
+            --nav-border: rgba(0, 0, 0, 0.05);
+            --nav-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+            --nav-text: #444444;
+            --nav-accent: #18a236;
+            --nav-hover-bg: rgba(24, 162, 54, 0.08);
+            
+            /* ICON STYLE: Gray by default */
+            --icon-filter: grayscale(100%) opacity(0.7); 
+            --icon-filter-hover: grayscale(0%) opacity(1);
+        }
+
+        [data-theme="dark"] {
+            --site-bg: #121212;
+            --site-text: #f0f0f0;
+            
+            /* Dark Mode Navbar */
+            --nav-glass-bg: rgba(18, 18, 18, 0.85);
+            --nav-border: rgba(255, 255, 255, 0.1);
+            --nav-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+            --nav-text: #e0e0e0;
+            --nav-accent: #4ade80;
+            --nav-hover-bg: rgba(74, 222, 128, 0.15);
+            
+            /* ICON STYLE DARK MODE: Invert colors so black icons become white/gray */
+            --icon-filter: grayscale(100%) invert(1) opacity(0.8);
+            --icon-filter-hover: grayscale(0%) invert(1) opacity(1); 
+        }
+
+        body {
+            background-color: var(--site-bg);
+            color: var(--site-text);
+            transition: background-color 0.3s ease, color 0.3s ease;
+            margin: 0;
+        }
+
+        /* --- 2. NAVBAR STYLING --- */
+        .glass-navbar {
+            background: var(--nav-glass-bg) !important;
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--nav-border);
+            box-shadow: var(--nav-shadow);
+            padding: 0.8rem 1rem !important;
+            transition: all 0.3s ease;
+            position: sticky;
+            top: 0;
+            z-index: 1030;
+        }
+
+        .glass-navbar .nav-link {
+            font-family: 'Poppins', sans-serif;
+            color: var(--nav-text) !important;
+            font-weight: 500;
+            font-size: 0.9rem;
+            padding: 8px 16px !important;
+            border-radius: 8px;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* ICON STYLING */
+        .glass-navbar .nav-link img {
+            transition: transform 0.2s ease, filter 0.3s ease;
+            filter: var(--icon-filter);
+        }
+
+        /* HOVER EFFECTS */
+        .glass-navbar .nav-link:hover {
+            background-color: var(--nav-hover-bg) !important;
+            color: var(--nav-accent) !important;
+        }
+        
+        .glass-navbar .nav-link:hover img {
+            transform: scale(1.2) rotate(-5deg);
+            filter: var(--icon-filter-hover);
+        }
+
+        /* Active State */
+        .glass-navbar .nav-item.active .nav-link {
+            color: var(--nav-accent) !important;
+            font-weight: 600;
+        }
+        
+        .glass-navbar .nav-item.active .nav-link img {
+            filter: var(--icon-filter-hover);
+        }
+
+        /* Underline Animation */
+        .glass-navbar .nav-item { position: relative; }
+        .glass-navbar .nav-item::after {
+            content: '';
+            position: absolute;
+            bottom: 2px;
+            left: 50%;
+            width: 0%;
+            height: 3px;
+            background: var(--nav-accent);
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+            border-radius: 2px;
+        }
+        .glass-navbar .nav-item.active::after { width: 70%; }
+
+        /* --- 3. THEME BUTTON --- */
+        #theme-toggle {
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            font-size: 1.6rem;
+            padding: 5px;
+            line-height: 1;
+            color: var(--nav-text);
+            transition: transform 0.3s;
+        }
+        #theme-toggle:hover { transform: rotate(45deg) scale(1.1); }
+        #theme-toggle:focus { outline: none; }
+
+        /* --- 4. CUSTOM HAMBURGER BUTTON (RENAMED CLASSES) --- */
+        .custom-menu-btn {
+            border: none;
+            background: transparent;
+            cursor: pointer;
+            padding: 10px;
+            width: 45px;
+            height: 45px;
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+            position: relative;
+            z-index: 1031;
+        }
+        
+        /* Show hamburger only on mobile */
+        @media (max-width: 991px) {
+            .custom-menu-btn {
+                display: flex;
+            }
+        }
+        
+        .custom-menu-btn:focus {
+            outline: none;
+            box-shadow: none;
+        }
+        
+        .menu-line {
+            display: block;
+            width: 26px;
+            height: 3px;
+            background-color: var(--nav-text);
+            transition: all 0.3s ease-in-out;
+            border-radius: 2px;
+        }
+
+        /* X transformation when open */
+        .custom-menu-btn.menu-open .menu-line:nth-child(1) {
+            transform: translateY(8px) rotate(45deg);
+            background-color: var(--nav-accent);
+        }
+
+        .custom-menu-btn.menu-open .menu-line:nth-child(2) { 
+            opacity: 0; 
+            transform: translateX(20px);
+        }
+
+        .custom-menu-btn.menu-open .menu-line:nth-child(3) {
+            transform: translateY(-8px) rotate(-45deg);
+            background-color: var(--nav-accent);
+        }
+
+        @media (max-width: 991px) {
+            .glass-navbar .navbar-collapse {
+                background: var(--site-bg);
+                padding: 15px;
+                border-radius: 12px;
+                margin-top: 15px;
+                border: 1px solid var(--nav-border);
+                box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            }
+            .glass-navbar .nav-item::after { display: none; }
+            .glass-navbar .nav-item.active .nav-link {
+                border-left: 4px solid var(--nav-accent);
+                background-color: var(--nav-hover-bg) !important;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg glass-navbar">
+    <div class="container-fluid">
+        
+        <div class="navbar-brand">
+            <button id="theme-toggle" aria-label="Switch Theme">
+                <span id="theme-icon">🌞</span>
+            </button>
+        </div>
+
+        <button class="custom-menu-btn" type="button" id="menuToggle" aria-label="Toggle navigation" aria-controls="mainNav" aria-expanded="false">
+            <span class="menu-line"></span>
+            <span class="menu-line"></span>
+            <span class="menu-line"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-end" id="mainNav">
+            <ul class="navbar-nav">
+                
+                    <li class="nav-item">
+                        <a href="/" class="nav-link">
+                            
+                            
+                                <img src="/img/icons/home.svg" alt="icon" height="20px" width="20px">
+                            
+                            
+                            <span>Home</span>
+                        </a>
+                    </li>
+                
+                    <li class="nav-item">
+                        <a href="/publications.html" class="nav-link">
+                            
+                            
+                                <img src="/img/icons/publications.png" alt="icon" height="20px" width="20px">
+                            
+                            
+                            <span>Publications</span>
+                        </a>
+                    </li>
+                
+                    <li class="nav-item">
+                        <a href="/blog.html" class="nav-link">
+                            
+                            
+                                <img src="/img/icons/blog.svg" alt="icon" height="20px" width="20px">
+                            
+                            
+                            <span>Blog</span>
+                        </a>
+                    </li>
+                
+                    <li class="nav-item">
+                        <a href="/projects.html" class="nav-link">
+                            
+                            
+                                <img src="/img/icons/projects.jpg" alt="icon" height="20px" width="20px">
+                            
+                            
+                            <span>Projects</span>
+                        </a>
+                    </li>
+                
+                    <li class="nav-item">
+                        <a href="/random.html" class="nav-link">
+                            
+                            
+                                <img src="/img/icons/certificates.png" alt="icon" height="20px" width="20px">
+                            
+                            
+                            <span>Random</span>
+                        </a>
+                    </li>
+                
+                    <li class="nav-item">
+                        <a href="/search/" class="nav-link">
+                            
+                            
+                                <img src="/img/icons/search.png" alt="icon" height="20px" width="20px">
+                            
+                            
+                            <span>Search</span>
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+    const toggleButton = document.getElementById('theme-toggle');
+    const themeIcon = document.getElementById('theme-icon');
+    const body = document.body;
+
+    // Theme Logic
+    const currentTheme = localStorage.getItem('theme');
+    if (currentTheme) {
+        body.setAttribute('data-theme', currentTheme);
+        themeIcon.textContent = currentTheme === 'dark' ? '🌜' : '🌞';
+    } else {
+        body.setAttribute('data-theme', 'light');
+    }
+
+    toggleButton.addEventListener('click', () => {
+        const currentTheme = body.getAttribute('data-theme');
+        const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+        body.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
+        themeIcon.textContent = newTheme === 'dark' ? '🌜' : '🌞';
+    });
+
+    // Mobile menu toggle (works without Bootstrap collapse plugin)
+    const menuBtn = document.getElementById('menuToggle');
+    const navCollapse = document.getElementById('mainNav');
+
+    function setMenuState(isOpen) {
+        menuBtn.classList.toggle('menu-open', isOpen);
+        navCollapse.classList.toggle('show', isOpen);
+        menuBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    }
+
+    menuBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        setMenuState(!navCollapse.classList.contains('show'));
+    });
+
+    document.addEventListener('click', function(e) {
+        if (window.innerWidth <= 991 && !menuBtn.contains(e.target) && !navCollapse.contains(e.target)) {
+            setMenuState(false);
+        }
+    });
+
+    window.addEventListener('resize', function() {
+        if (window.innerWidth > 991) {
+            setMenuState(false);
+        }
+    });
+
+    // Active Link Logic
+    $(function() {
+        var url = window.location.href;
+        $(".glass-navbar a.nav-link").each(function() {
+            if (url == (this.href)) {
+                $(this).closest(".nav-item").addClass("active");
+            }
+        });
+    });
+</script>
+
+</body>
+</html>
+
+    <div align="center">  
+      <br><br>
+      
+      <link rel="stylesheet" type="text/css" href="../css/jimstyle.css" />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Cardo:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+    /* VARIABLES */
+    :root {
+        /* Light Mode */
+        --background-color: #ffffff;
+        --text-color: #1a202c;
+        --accent-color: #ff4500; /* Orange-Red for Anime */
+        --quote-border: #18a236;
+        --quote-bg: rgba(0, 0, 0, 0.03);
+        --img-caption-color: #666;
+    }
+
+    [data-theme="dark"] {
+        /* Dark Mode - PITCH BLACK FIX */
+        --background-color: #000000 !important;
+        --text-color: #e0e0e0 !important;
+        --accent-color: #ff6347;
+        --quote-bg: rgba(255, 255, 255, 0.08);
+        --img-caption-color: #aaa;
+    }
+
+    /* GLOBAL */
+    body {
+        background-color: var(--background-color); 
+        color: var(--text-color);
+        font-family: 'Cardo', serif; 
+        line-height: 1.8;
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    /* CONTAINER */
+    .blog-container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px 20px 100px 20px;
+    }
+
+    /* HEADER */
+    .blog-header {
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    .blog-title {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 700;
+        font-size: 2.2rem;
+        line-height: 1.2;
+        margin-bottom: 10px;
+        color: var(--text-color);
+    }
+    
+    .blog-subtitle {
+        font-family: 'Poppins', sans-serif;
+        font-size: 1rem;
+        color: var(--img-caption-color);
+        margin-bottom: 25px;
+        display: block;
+        font-weight: 400;
+    }
+
+    /* TAGS */
+    .tag-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .tag-pill {
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        font-weight: 600;
+        padding: 4px 12px;
+        border-radius: 50px;
+        border: 1px solid;
+        background: transparent;
+    }
+
+    .tag-orangered { color: #ff4500; border-color: #ff4500; }
+    .tag-blue { color: #0076f4; border-color: #0076f4; }
+    .tag-yellow { color: #d4af37; border-color: #d4af37; }
+
+    /* CONTENT */
+    .article-content {
+        text-align: justify;
+        font-size: 1.15rem; 
+    }
+
+    /* Section Headers (Anime Names) */
+    .article-content h2 {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 700;
+        font-size: 1.5rem;
+        margin-top: 60px;
+        margin-bottom: 20px;
+        color: var(--text-color);
+        border-left: 4px solid var(--accent-color);
+        padding-left: 15px;
+    }
+    
+    /* Source Anime Titles */
+    .source-anime {
+        font-family: 'Poppins', sans-serif;
+        font-size: 1rem;
+        font-weight: 600;
+        color: var(--img-caption-color);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-top: 60px;
+        margin-bottom: -40px; /* Pull close to the character name */
+        display: block;
+    }
+
+    .article-content p {
+        margin-bottom: 24px;
+        color: var(--text-color);
+    }
+
+    /* Quotes */
+    .anime-quote {
+        font-family: 'Poppins', sans-serif;
+        font-style: italic;
+        font-size: 1.05rem;
+        margin: 30px 0;
+        padding: 25px 30px;
+        background: var(--quote-bg);
+        border-radius: 8px;
+        color: var(--text-color);
+        white-space: pre-line; /* Preserves your line breaks in quotes */
+        line-height: 1.6;
+    }
+
+    /* IMAGES */
+    .img-wrapper {
+        text-align: center;
+        margin: 40px 0;
+    }
+    
+    .img-wrapper img {
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        max-width: 100%;
+        height: auto;
+    }
+
+    .img-caption {
+        display: block;
+        margin-top: 10px;
+        font-size: 0.9rem;
+        font-style: italic;
+        color: var(--img-caption-color);
+    }
+
+</style>
+
+<div class="blog-container">
+
+    <header class="blog-header">
+        <h1 class="blog-title">My favourite Anime Characters from every anime I have watched</h1>
+        <span class="blog-subtitle">Some of my favourite characters are mostly villains x_x</span>
+        
+        <div class="tag-container">
+            <span class="tag-pill tag-orangered">Anime</span>
+            <span class="tag-pill tag-blue">Fiction</span>
+            <span class="tag-pill tag-yellow">Philosophy</span>
+        </div>
+    </header>
+
+    <div class="article-content">
+
+        <span class="source-anime">From Naruto</span>
+        <h2>Madara Uchiha</h2>
+
+        <p>
+            Madara Uchiha is a GOD. He is the only being who has no weaknesses, hence even the writer didn't 
+            know how to kill him. Here is the speech which I truly admire:
+        </p>
+
+        <div class="anime-quote">
+            Wake up to reality.
+
+            Nothing ever goes as planned in this accursed world. The longer you live, the more 
+            you will realize, that the only things that truly exist in this reality are merely pain, 
+            suffering and futility.
+
+            Listen...
+
+            Everywhere you look in this world, wherever there is light, there will always 
+            be shadows to be found as well. As long as there is a concept of victors, the vanquished will also exist.
+            The selfish intent of wanting to preserve peace, initiates wars. And Hatred is born in order to protect Love.
+            There are nexuses, causal relationships that cannot be separated.
+
+            I want to sever the fate of this world.
+
+            A world of only Victors.
+            A world of only Peace.
+            A world of only Love.
+            I will create such a World.
+
+            I am... the Ghost of the Uchiha.
+
+            For truly this reality... is a Hell.
+        </div>
+
+        <p>
+            The fact that he fought the whole shinobi world along with all the tailed beasts single 
+            handedly shows the power and determination of this character. He is the founder of the Uchiha 
+            Clan, which runs the show.
+        </p>
+
+        <div class="img-wrapper">
+            <img src="../blogs/blog_img/Anime/3_madara.png" style="width: 70%">
+            <span class="img-caption">Madara Uchiha</span>
+        </div>
+
+        <div class="img-wrapper">
+            <img src="../blogs/blog_img/Anime/18_madara1.jpg" style="width: 70%">
+            <span class="img-caption">Madara Uchiha</span>
+        </div>
+
+        <div class="img-wrapper">
+            <img src="../blogs/blog_img/Anime/19_madara2.png" style="width: 70%">
+            <span class="img-caption">Madara Uchiha</span>
+        </div>
+
+        <p>
+            My take from this anime is there are no villains and heroes in this world. We admire heroes as kids, 
+            but as we grow old, we learn to understand the philosophy of villains. After all, everyone is born 
+            with a pure heart. Everyone is controlled and exploited by some other's decision in one or another 
+            way throughout life. Even if you get everything in the world, which you desire, you won't be happy. 
+            There is nothing as perfectness or utopian world. He who walks alone walks the fastest. How much you grow, 
+            there will be someone who surpasses you in everything. There's a saying: Roses are red. Violets are blue. 
+            No matter how hard you try, an Asian will be better than you. Someone's life's work might be someone's 
+            weekend's work, it all depends. Success is relative. It might thrill someone for achieving something, 
+            but other may consider such achievements meaningless, he/she may have such achievements for breakfast. 
+            The greatest men are unnoticed.
+        </p>
+        
+        <p>
+            Being the best has their own set of consequences, which might not always be good. 
+            Ultimately, everyone is cursed by their own destiny and fate, which are unavoidable. Whatever happens will 
+            happen eventually, how much hard you try to stop it. Karma is a real thing, and destiny cannot be avoided.
+            One who learns to master to control his/her mind wins the world. Happiness, health and peace of mind are the 
+            things that a person needs to chase, not money or fame, because everything is temporary. Humans have created 
+            this idea of a society in such a way that everyone is bound to live within its norms. Humans have made 
+            themselves the only thing that has meaningful existence in this universe, which might not be true. 
+            We are specks of solar dust anyway, and our existence is merely a process of manipulating atoms.
+        </p>
+
+        <p>
+            The power balance in everyone's life remains almost the same. It's extremely unlikely that a person 
+            is extremely well in both sports and academics. He/She may be very good in academics but may suffer 
+            from disease. It is necessary to find happiness in nothingness. One who has a bad and childhood full 
+            of hardships, usually has a good adulthood with minimum effort, since he/she has learnt the way world 
+            works, and an unknown power works in support, protecting the balance. The reverse is also true, hence 
+            everything in this world is balanced. Getting everything and knowing everything beforehand can make the 
+            present very boring.
+        </p>
+        
+        <p>
+            Also, as a character, Naruto was very dumb in the beginning. It's not always to set out bias towards 
+            the outstanding ones. The real fun is when a guy with average intelligence surpasses everyone just by 
+            rigorous training and by the will and determination of never giving up.
+        </p>
+
+
+        <h2>Itachi Uchiha</h2>
+        <p>
+            He is the prodigy who could have surpassed Madara Uchiha. His sacrifice for the village will 
+            be remembered. He thought like a Hokage at the age of 7.
+        </p>
+        
+        <div class="anime-quote">
+            Even the strongest of opponents always has a weakness. Knowledge and awareness are vague, and perhaps 
+            better called illusions. People live their lives bound by what they accept as correct and true. That's 
+            how they define Reality. But what does it mean to be “correct” or “true”? Merely vague concepts… Their 
+            Reality may all be a mirage. Can we consider them to simply be living in their own world, shaped by their 
+            beliefs?  Everyone lives within their own subjective interpretation. Teachings that do not speak of pain 
+            have no meaning, for humankind cannot gain anything in return. I actually don't think something like 
+            perfection exists. That is, I think why we are born able to absorb things... and by comparing ourselves
+            with something else we can finally head in a good direction. It is not wise to judge others based on your 
+            own preconceptions and by their appearances. Those who cannot acknowledge themselves will eventually fail.
+        </div>
+
+        <div class="img-wrapper">
+            <img src="../blogs/blog_img/Anime/4_itachi.jpg" style="width: 70%">
+            <span class="img-caption">Itachi Uchiha</span>
+        </div>
+
+
+        <h2>Uchiha Clan</h2>
+        <p>
+            To be honest, all the strongest and the prominent members of Uchiha are cool. 
+            They possess extraordinary power which only the Senjus can rival.
+        </p>
+
+        <div class="img-wrapper">
+            <img src="../blogs/blog_img/Anime/2_uchiha_members.jpeg" style="width: 70%">
+            <span class="img-caption">Clan of the Uchihas</span>
+        </div>
+
+
+        <h2>Akatsuki</h2>
+        <p>
+            These are probably the coolest villains in the anime history. They are so cool that 
+            even two members can destroy a single village. They were mainly assigned to capture 
+            the tailed beasts, which probably a whole arsenal of any village will fail to achieve.
+            All the members of Akatsuki are at Hokage level and are extremely professional and 
+            efficient in completing their tasks in time.
+        </p>
+
+        <div class="img-wrapper">
+            <img src="../blogs/blog_img/Anime/1_Akatsuki_Ranked.webp" style="width: 70%">
+            <span class="img-caption">Akatsuki</span>
+        </div>
+
+        <div class="img-wrapper">
+            <img src="../blogs/blog_img/Anime/5_madara.webp" style="width: 70%">
+            <span class="img-caption">Madara never said that</span>
+        </div>
+
+
+        <span class="source-anime">From Akame ga Kill!</span>
+        <h2>Esdeath</h2>
+        <p>
+            Well, I thought I will put Gojo before Esdeath, but it wouldn't be fair. She is the 
+            empire's strongest and coldest character. Probably the best female character in the 
+            anime world. She brings back memories of someone whom I have seen in real life :) The 
+            saddest part of this anime is all the best characters dies at the end, including Esdeath.
+            She leads the Jaegars team.
+        </p>
+
+        <div class="img-wrapper">
+            <img src="../blogs/blog_img/Anime/6_esdeath.jpg" style="width: 70%">
+            <span class="img-caption">Esdeath</span>
+        </div>
+
+        <div class="img-wrapper">
+            <img src="../blogs/blog_img/Anime/7_jaegars.webp" style="width: 70%">
+            <span class="img-caption">Jaegars</span>
+        </div>
+
+
+        <span class="source-anime">From That Time I Got Reincarnated as a Slime</span>
+        <h2>Diablo a.k.a. "Noir"</h2>
+        <p>
+            Being one of the strongest butlers of the Demon Lord Rimuru, he is part of the top four. He is one of the 
+            earliest existing demons, rivaling the powers of the Demon Lords. Whatever spell you cast against him, 
+            everything is useless. He stays as a loyal servant of Rimuru, but only a few of the oldest and strongest 
+            existing Demon Lords know about his existence. This character has a different charm, being one of 
+            the strongest, he chooses to remain undercover most of the time.
+        </p>
+
+        <div class="img-wrapper">
+            <img src="../blogs/blog_img/Anime/diablo_new.jpg" style="width: 40%">
+            <span class="img-caption">Diablo, a.k.a. The Primodial "Black" Noir</span>
+        </div>
+
+
+        <span class="source-anime">From Solo Levelling</span>
+        <h2>Sung Jin-woo a.k.a. "The Shadow Monarch"</h2>
+        <p>
+            Once considered one of the weakest hunters in the world, this young man—son of Korea's first awakened hunter—is chosen 
+            by the creator of the System to become its Player. Gifted with unmatched determination and an unbreakable will to 
+            survive any trial, he eventually evolves into the Shadow Monarch. Living in a world governed by a visible System, he 
+            gains the power to level up, acquire legendary-tier weapons, and train relentlessly. After years of growth and hardship, 
+            he rises to become one of the most powerful hunters, finally achieving everything he once dreamed of.
+        </p>
+
+        <div class="img-wrapper">
+            <img src="../blogs/blog_img/Anime/jinwoo_new.jpg" style="width: 40%">
+            <span class="img-caption">Sung Jin-woo</span>
+        </div>
+
+
+        <span class="source-anime">From Jujutsu Kaisen</span>
+        <h2>Gojo Satoru</h2>
+        <p>
+            Overpowered Kakashi, level 1000 boss who is replaying the game just for fun. 
+            He is the strongest sorcerer and the strongest character in the jujutsu world.
+        </p>
+        <p>My man just woke up one day, and started to speak facts. Some of his famous quotes are:</p>
+
+        <div class="anime-quote">
+            Dying to win and risking death to win are completely different. <br>
+            When Granted Everything, You Can't Do Anything. <br>
+            But no matter how many allies you have around you, when you die, you'll be alone. <br>
+            Love Is The Most Twisted Curse Of All.
+        </div>
+
+        <div class="img-wrapper">
+            <img src="../blogs/blog_img/Anime/8_gojo.jpg" style="width: 70%">
+            <span class="img-caption">Gojo Satoru</span>
+        </div>
+
+        <h2>Yuta Okkotsu</h2>
+        <p>Gojo's cousin, seriously depressed, but super strong character.</p>
+
+        <div class="img-wrapper">
+            <img src="../blogs/blog_img/Anime/9_Yuta_Okkotsu_Images.jpeg" style="width: 70%">
+            <span class="img-caption">Yuta Okkotsu</span>
+        </div>
+
+
+        <span class="source-anime">From Chainsaw Man</span>
+        <h2>Makima aka 'Control Devil'</h2>
+        <p>
+            Being the charming character, one might think she is saving the humanity, 
+            since she is with the good-side, but the truth is she is the real antagonist 
+            of the series, and one of my favorite characters. Her powers are unknown and 
+            of unimaginable magnitude.
+        </p>
+
+        <div class="img-wrapper">
+            <img src="../blogs/blog_img/Anime/makima.png" style="width: 70%">
+            <span class="img-caption">Makima</span>
+        </div>
+
+
+        
+
+
+        <span class="source-anime">From Demon Slayer: Kimetsu no Yaiba</span>
+        <h2>Giyu Tomioka</h2>
+        
+        <div class="img-wrapper">
+            <img src="../blogs/blog_img/Anime/giyu_tomioka.jpg" style="width: 70%">
+            <span class="img-caption">Giyu Tomioka</span>
+        </div>
+
+
+        <span class="source-anime">From Death Note</span>
+        <h2>Ryuga Hideki</h2>
+        <p>
+            Super smart, but dies just because he was friend with his murderer. 
+            He is a prodigy and I would recommend Death Note to everyone. 
+            Here is his famous saying:
+        </p>
+
+        <div class="anime-quote">
+            There are many types of monsters in this world, monsters who will not show themselves and who cause 
+            trouble. Monsters who abduct children, monsters who devour dreams, monsters who suck blood, and, 
+            monsters who always tell lies. Lying monsters are a real nuisance, they are much more cunning than 
+            other monsters. They pose as humans, even though they have no understanding of the human heart. They eat, 
+            even though they've never experienced hunger. They study even though they have no interest in academics. 
+            They seek friendship even though they do not know how to love. If I were to encounter such a monster, I 
+            would likely be eaten by it, because in truth, I am that monster.
+        </div>
+
+        <div class="img-wrapper">
+            <img src="../blogs/blog_img/Anime/10_L.jpg" style="width: 70%">
+            <span class="img-caption">Ryuga Hideki aka 'L'</span>
+        </div>
+
+
+
+        <span class="source-anime">From Sakamoto Days</span>
+        <h2>Yoichi Nagumo</h2>
+        <p>
+            The personality of this character is designed to be OP. The moment you see him, you will see him overshadowing 
+            some of the strongest characters in the anime. With some air of mystery around him, we find him to be one of the 
+            strongest members of the ORDER.
+        </p>
+
+        <div class="img-wrapper">
+            <img src="../blogs/blog_img/Anime/nagumo.png" style="width: 70%">
+            <span class="img-caption">Yoichi Nagumo</span>
+        </div>
+
+
+        <span class="source-anime">From Bleach</span>
+        <h2>Sousuke Aizen</h2>
+        <p>
+            Whatever might be the consequences of someone's action, this guy has a plan to overshadow everything, 
+            and in the end, he is the one who pulls the strings for everything that causes catastrophe in the soul 
+            society. Being jailed, he is still considered one of the five threats by Yhwach, since he is immortal.
+        </p>
+
+        <div class="img-wrapper">
+            <img src="../blogs/blog_img/Anime/aizen.jpg" style="width: 70%">
+            <span class="img-caption">Sousuke Aizen</span>
+        </div>
+
+
+        <span class="source-anime">From Frieren: Beyond Journey's End</span>
+        <h2>Frieren the slayer</h2>
+        <p>
+            I don't know where to start with this character. One of the calmest and strongest characters that I 
+            have seen in anime. The general vibe of the show is calm, post-main arc, adventure-style anime. Some of 
+            the scenes, stories, and episodes are too nostalgic, thanks to the songs and vibrant color palette, but 
+            overall, this is a very relaxed anime. The protagonist Frieren is technically immortal, since she is an 
+            elf whose lifespan is eternity; having lived over one thousand years, she is part of most of the canon 
+            events that led the world to where it is now. It's sad that most of the bonds she made have died, and 
+            for that reason, she now wants to know people and places more than ever, knowing that nothing lasts for long. 
+            This character's lifestyle is super persevering and patient, which makes her consider some hobbies she can 
+            pursue. Her favorite hobby is to collect grimoires while exploring new places. She believes that the fun in 
+            magic lies in its journey of searching and not in using it, which leads her to help others and collect these 
+            items in return for the favor.
+        </p>
+
+        <div class="img-wrapper">
+            <img src="../blogs/blog_img/Anime/frieren.png" style="width: 70%">
+            <span class="img-caption">Senku Ishigami</span>
+        </div>
+
+
+        <span class="source-anime">From Dr. Stone</span>
+        <h2>Senku Ishigami</h2>
+        <p>
+            The one with perseverance and a true pursuer of science and engineering, this individual teaches us to follow 
+            science and endure all the hardships, even if it means creating everything from scratch. Being stuck in the Stone 
+            Age, this individual will rebuild a civilization, one that will surpass the current one by sheer will and intellect.
+        </p>
+
+        <div class="img-wrapper">
+            <img src="../blogs/blog_img/Anime/senku.png" style="width: 70%">
+            <span class="img-caption">Senku Ishigami</span>
+        </div>
+
+        <span class="source-anime">From "The Promised Neverland"</span>
+        <h2>Norman</h2>
+        
+        <div class="img-wrapper">
+            <img src="../blogs/blog_img/Anime/norman.jpg" style="width: 70%">
+            <span class="img-caption">Norman</span>
+        </div>
+
+        <span class="source-anime">From Vinland Saga</span>
+        <h2>Thors Snorresson</h2>
+        <p>
+            Known as the "Troll of Jom," Thors stands as one of the greatest warriors in Viking history, yet his true strength 
+            lies not in his blade but in his wisdom. A man who abandoned the path of violence to seek a life of peace, he 
+            embodies the ideal that true strength means protecting those you love without resorting to unnecessary bloodshed. 
+            His philosophy that "a true warrior needs no sword" and his unwavering compassion, even toward his enemies, set 
+            him apart as a legendary figure. Though his time in the story is brief, his influence shapes the entire narrative 
+            and the journey of those he left behind.
+        </p>
+
+        <div class="img-wrapper">
+            <img src="../blogs/blog_img/Anime/vinland_saga_thors.png" style="width: 70%">
+            <span class="img-caption">Thors Snorresson</span>
+        </div>
+
+
+        <span class="source-anime">From Classroom of the Elite</span>
+        <h2>Kiyotaka Ayanokoji</h2>
+        <p>
+            “Genius lives only one storey above madness.” This guy was created in the white room 
+            (a mysterious organization), where you sacrifice childhood to be an exceptionally 
+            talented student of the country. He has displayed tremendous ability in every field 
+            he was trained in since childhood, right from studies to sports. To experience how 
+            the world works in real life, he has been admitted to a school where he chooses to 
+            remain average.
+        </p>
+        <div class="anime-quote">“It takes great talent and skill to conceal one's talent and skill.”</div>
+        <p>
+            He doesn't have such social skills as other candidates of the class, 
+            but the things that he does without them are truly exceptional.
+            He is a true genius and stays to remain average, to lie below the radar, 
+            where in real life, he is the best student the system has seen. He rarely 
+            takes part in the front lines and controls the class from behind.
+        </p>
+
+        <div class="img-wrapper">
+            <img src="../blogs/blog_img/Anime/Kiyotaka_Ayanokoji.jpg" style="width: 70%">
+            <span class="img-caption">Kiyotaka Ayanokoji</span>
+        </div>
+
+
+        <span class="source-anime">From Noragami</span>
+        <h2>Yato</h2>
+
+        <div class="img-wrapper">
+            <img src="../blogs/blog_img/Anime/yato_yukine.png" style="width: 70%">
+            <span class="img-caption">Yato with his regelia Yukine</span>
+        </div>
+
+
+        <span class="source-anime">From One-Punch Man</span>
+        <h2>Saitama</h2>
+        <p>
+            This character shows us that for being super strong, one need to work tremendously hard. 
+            He worked so hard that all this hair fell off. He probably is the strongest hero, but he 
+            stays at the bottom for specific reasons.
+        </p>
+        <div class="anime-quote">In exchange for power, maybe I've lost something that is essential to being human.</div>
+
+        <div class="img-wrapper">
+            <img src="../blogs/blog_img/Anime/11_saitama.jpg" style="width: 70%">
+            <span class="img-caption">Saitama</span>
+        </div>
+
+
+        <span class="source-anime">From Maou Gakuin no Futekigousha (The Misfit of Demon King Academy)</span>
+        <h2>Anos Voldigoad</h2>
+        <p>
+            Anos tells us that everything depends on the user, not weapon. For example, if one is an expert, 
+            he doesn't have to use legendary weapons for doing extra-ordinary damage, they can cause extra-ordinary 
+            damage with normal weapons. Similarly, a naïve user cannot cause extra-ordinary damage even if he is given 
+            legendary weapons. He being the lord of the devils, and enormous powers, shows substantial charm from episode 1.
+        </p>
+
+        <div class="img-wrapper">
+            <img src="../blogs/blog_img/Anime/anos_voldigoad.jpg" style="width: 70%">
+            <span class="img-caption">Anos Voldigoad</span>
+        </div>
+
+
+        <span class="source-anime">From Mob Psycho 100</span>
+        <h2>Shigeo Kageyama</h2>
+        <p>Resembles saitama but has mistic powers.</p>
+
+        <div class="img-wrapper">
+            <img src="../blogs/blog_img/Anime/12_kageyama.jpg" style="width: 70%">
+            <span class="img-caption">Kageyama</span>
+        </div>
+
+
+        <span class="source-anime">From Tokyo Ghoul</span>
+        <h2>Rize Kamishiro</h2>
+        <p>
+            The anime takes its turns. I would not recommend this to anyone except the first and second seasons. 
+            She is the source of power for Kaneki Ken, since her Ghoul parts were transplanted to Kaneki Ken, 
+            the protagonist of the story. Though Kaneki took her powers to new heights, by training and 
+            patiently enduring.
+        </p>
+
+        <div class="anime-quote">
+            There's no such thing as fate. It's simply a combination of one circumstance and the next. <br>
+            There are times when you have to give up on one thing to preserve the other.
+        </div>
+
+        <div class="img-wrapper">
+            <img src="../blogs/blog_img/Anime/13_rize_tokyo_ghoul.jpg" style="width: 70%">
+            <span class="img-caption">Rize</span>
+        </div>
+
+        <h2>Kaneki Ken</h2>
+        <p>
+            He wanted to make sure that ghouls and humans co-existed peacefully. 
+            He is one of the strongest members of the Aogiri tree.
+        </p>
+
+        <div class="img-wrapper">
+            <img src="../blogs/blog_img/Anime/14_tokyo_ghoul.jpg" style="width: 70%">
+            <span class="img-caption">Kaneki Ken</span>
+        </div>
+
+
+        <span class="source-anime">From Re-Creators</span>
+        <h2>Altair</h2>
+        <p>
+            Altair shares similarities with Esdeath, but she is even more ruthless and devoid of morality. 
+            Driven by a desire for destruction, she sets out to annihilate every anime world connected to the 
+            protagonist. As one of the most powerful creations, her strength grows daily, fueled by the thoughts and 
+            admiration of those who believe in her. She meticulously plots against anyone aware of her intentions. 
+            Ultimately, she finds solace in reuniting with her creator and chooses to reside in a universe of her own 
+            making. Altair is a poignant example of how villains are often shaped by the world around them—she became 
+            one not out of desire, but because she was given no other choice.
+        </p>
+
+        <div class="img-wrapper">
+            <img src="../blogs/blog_img/Anime/altair_new.webp" style="width: 40%">
+            <span class="img-caption">Altair</span>
+        </div>
+
+
+        <span class="source-anime">From Plunderer</span>
+        <h2>Licht Bach</h2>
+        <p>The strongest member of the 7 aces. His true powers are still unknown.</p>
+
+        <div class="img-wrapper">
+            <img src="../blogs/blog_img/Anime/15_LightBach.webp" style="width: 70%">
+            <span class="img-caption">Licht Bach</span>
+        </div>
+
+
+        <span class="source-anime">From Beyblade</span>
+        <h2>Kai</h2>
+        <p>The cool chartacter that we admired during our childhood. He was the strongest side character and probably the 
+            most loved character because of his attitude.</p>
+
+        <div class="img-wrapper">
+            <img src="../blogs/blog_img/Anime/16_kai.jpg" style="width: 70%">
+            <span class="img-caption">Kai</span>
+        </div>
+
+
+        <span class="source-anime">From Charlotte</span>
+        <h2>Yu Otosaka</h2>
+
+        <div class="img-wrapper">
+            <img src="../blogs/blog_img/Anime/Otosaka.jpg" style="width: 70%">
+            <span class="img-caption">Yu</span>
+        </div>
+
+
+        <span class="source-anime">From Case Closed</span>
+        <h2>Detective Conan</h2>
+        <p>
+            The smart kid that we all wanted to be sometime in our life. I am not sure how long the 
+            episode chain will continue, but looks like he will not age yet. He was drugged to a younger 
+            form but he had not been able to find his culprits yet.
+        </p>
+
+        <div class="img-wrapper">
+            <img src="../blogs/blog_img/Anime/17_conan.jpg" style="width: 70%">
+            <span class="img-caption">Detective Conan</span>
+        </div>
+
+        <p style="text-align: center; font-size: 0.85rem; opacity: 0.7; margin-top: 50px;">
+            Note: The pictures are not mine and were collected from different sources available on the internet.
+        </p>
+
+    </div>
+</div>
+
+      <br><br>
+      
+    </div>
+
+  
+
+
+  <!-- Footer -->
+  <footer class="footer page-footer font-small pt-1">
+    <div  align="center">
+      
+          <!-- Copyright -->
+          <div class="footer-copyright" style="color: rgb(217, 61, 61);"> 2019-2026
+              <a href="https://github.com/Jimut123" style="color: rgb(217, 61, 61);"> Copyright © Jimut Bahan Pal</a>
+          </div>
+          <!-- Copyright -->
+    </div>
+  </footer>
+  <!-- Footer -->
+
+
+
+</body>
+</html>
+<style>
+.footer{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+
+}
+</style>
+
+
+<script>
+  var preloader = document.getElementById('loading');
+  function myFunction() { 
+      preloader.style.display = 'none';
+  }
+</script>
